@@ -4,6 +4,9 @@ from metro_app import views
 
 
 urlpatterns = [
-    path('',views.home,name="home"),
+    path('',views.nav,name="nav"),
+    path('login/',views.login,name="login"),
+
+    
 
 ]

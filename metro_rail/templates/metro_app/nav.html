@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 {% load static %}
+
 <html>
 <head>
-  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nav.css' %}">
   <img src="{% static 'images/metro.jpg' %}" alt="metro">
 </head>
 <div class="wrapper">
@@ -22,10 +23,14 @@
                     <li><a href="#">Login</a></li>
                     <li><a href="#">Registration</a></li>
                     
+                    
                 </ul>
+                {% block content %}
+                {% endblock %}
             </div>
         </div>
 
     </div>
+
 </div>
 </html>
