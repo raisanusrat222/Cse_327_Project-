@@ -1,5 +1,5 @@
 from django.contrib import admin
-from metro_app.models import schedule_check
+from metro_app.models import Premium_Member
 
 # Register your models here.
-admin.site.register(schedule_check)
+admin.site.register(Premium_Member)
