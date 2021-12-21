@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'Ticket.css' %}">
+</head>
+<div class="wrapper">
+  <div class="Container">
+        <div class="nav">
+            <div class="logo">
+                Dhaka <br> Metro Rail
+            </div>
+            <div class="menu">
+                <ul class="navMenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ticket</a></li>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="#">Fare</a></li>
+                      <li><a href="#">About US</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="Register.html">Registration</a></li>
+                </ul>
+            </div>
+        </div>
+  <div class="content">
+
+      <br>
+      <form class="example" action="." style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Source.." name="search1">
+          <input type="text" placeholder="Destination.." name="search2">
+          <br>
+          </br>
+  <button type="submit"><i class=" fa fa-search"> search </i></button>
+</form>
+     
+
+<table>
+  <tr>
+      <th>Train Name</th>
+
+      <th>Fare</th>
+  </tr>
+
+    {% for trainid in queryset %}
+  <tr>
+      <td>{{ trainid.trainname }}</td>
+
+    <td>{{ trainid.trainfare }}</td>
+  </tr>
+     {% endfor %}
+
+</table>
+
+
+        </div>
+
+
+    </div>
+</div>
+</html>
