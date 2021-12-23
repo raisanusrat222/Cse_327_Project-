@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Member Page</title>
-    <link rel="stylesheet" href="{% static 'premium member page.css' %}">
-    
+    <link rel="stylesheet" href="{% static 'premium-member-page.css' %}">
+    <!-- <link rel="stylesheet" href="/static/premium member page.css"> -->
+
 </head>
 <body>
-  
+
   <div class="wrapper">
     <div class="Container">
           <div class="nav">
@@ -26,64 +27,124 @@
                         <li><a href="#">About US</a></li>
                       <li><a href="#">Login</a></li>
                       <li><a href="#">Registration</a></li>
-                      
-                      
+
+
                   </ul>
-                  
+
               </div>
           </div>
-  
+
       </div>
-  
+
   </div>
     <div class="containter">
-        <div class="table-s">
-            <table >
-                <div class="header">
-                    <tr>
-                        <th>Current Packagaes</th>
-                        <th>End date</th>
-                        
-                      </tr>
-                </div>
-            
-                <div class="content">
-                    <tr>
-                        <td>Monthly</td>
-                        <td>20/12/2021</td>
-                        
-                      </tr>
-                      <tr>
-                        <td> -- </td>
-                        <td> -- </td>
-                       
-                      </tr>
-                      <tr>
-                        <td> -- </td>
-                        <td> -- </td>
-                       
-                      </tr>
-                </div>
-                
+      <div class="dashboard">
+        <h4>Dashboard</h4> <br>
+        <a id="pack">Packages</a>
+        <a id="afc">Apply For Card</a>
+        <a id="rcp">Renew Current Package</a>
+      </div>
+
+            <div id="table-cont">
+              <table id="table">
+                <tr>
+                  <th>Current Packages</th>
+                  <th>End date</th>
+
+                </tr>
+                <tr>
+                  <td>Monthly</td>
+                  <td>20/12/2021</td>
+
+                </tr>
+                <tr>
+                  <td> -- </td>
+                  <td> -- </td>
+
+                </tr>
+                <tr>
+                  <td> -- </td>
+                  <td> -- </td>
+
+                </tr>
+
+
               </table>
-        </div>
+            </div>
+
         <br>
-        <div class="rn-ac">
-           <div class="rnp">
+
+
+        <div id="rn-ac" class="rn-ac">
+          <div class="rnn">
             <a href="rn.html">Renew Package</a>
-           </div>
-            
-           
-            <div class="sub">
-                <label for="">Apply for card</label>
+          </div>
+          <div class="sub">
+            <label for="">Apply for card</label>
             <input type="submit">
-           </div>
-            
+          </div>
+        </div>
+
+
+
+        <div id="bigp" class="bigp">
+          <div class="package-selection">
+            <div class="ch">
+              <input type="checkbox" id="pac" name="vehicle1" value="p">
+              <label for="p">Renew Current Package</label>
+            </div>
+            <div class="pps">
+              <label for="">Select New Package</label>
+              <select name="pay" id="pay">
+                <option value="none">None</option>
+                <option value="Monthly-1000BDT">Monthly-1000BDT</option>
+                <option value="Half-Yearly-4500BDT">Half-Yearly-4500BDT</option>
+                <option value="Yearly-8000BDT">Yearly-8000BDT</option>
+              </select>
+
+            </div>
+
+
+          </div>
+          <br>
+          <div class="confirm">
+            <input type="submit" value="Confirm">
+          </div>
+
         </div>
 
     </div>
-    
-    
-    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- -------- Required JS for Event-------- -->
+
+    <script>
+      $(document).ready(function () {
+
+        $("#table-cont").hide();
+        $("#rn-ac").hide();
+        $("#bigp").hide();
+
+        $("#pack").click(function () {
+          $("#table-cont").slideDown();
+          $("#rn-ac").hide();
+          $("#bigp").hide();
+          $("#pack").active();
+        })
+        $("#afc").click(function () {
+          $("#rn-ac").slideDown();
+          $("#table-cont").hide();
+          $("#bigp").hide();
+        })
+        $("#rcp").click(function () {
+          $("#bigp").slideDown();
+          $("#table-cont").hide();
+          $("#rn-ac").hide();
+        })
+      })
+    </script>
+
 </body>
 </html>
