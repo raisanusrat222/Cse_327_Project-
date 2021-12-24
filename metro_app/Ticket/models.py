@@ -15,3 +15,11 @@ class Complain(models.Model):
     Contact = models.CharField(max_length=100)
     Complain = models.TextField()
 
+class TicketSell(models.Model):
+    ticketNo = models.IntegerField(primary_key=True)
+    ticketSource = models.CharField(max_length=70)
+    ticketDestination = models.CharField(max_length=70)
+    date = models.DateField()
+    noOfTicket = models.IntegerField()
+    total = models.IntegerField()
+    email = models.EmailField()

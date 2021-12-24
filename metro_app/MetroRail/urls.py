@@ -24,4 +24,7 @@ urlpatterns = [
     path('Complains/', views.Complains),
     path('AfterComplain/', views.AfterComplain, name="AfterComplain"),
     path('SeeComplains/', views.SeeComplains),
+    path('BuyTickets/', views.BuyTickets),
+    path('AfterTickets/', views.AfterTickets, name="AfterTickets"),
+
 ]

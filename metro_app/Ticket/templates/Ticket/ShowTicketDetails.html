@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'SeeComplain.css' %}">
+</head>
+<div class="wrapper">
+  <div class="Container">
+        <div class="nav">
+            <div class="logo">
+                Dhaka <br> Metro Rail
+            </div>
+            <div class="menu">
+                <ul class="navMenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ticket</a></li>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="Fare">Fare</a></li>
+                      <li><a href="#">About US</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="Register.html">Registration</a></li>
+                </ul>
+            </div>
+        </div>
+  <div>
+
+
+<table>
+
+  <tr>
+
+      <th>Train</th>
+      <th>Source</th>
+      <th>Destination</th>
+      <th>Arrival</th>
+      <th>No.of Tickets</th>
+      <th>Total Amount</th>
+
+  </tr>
+
+  <tr>
+      <td>{{tname}}</td>
+      <td>{{srcinfo}}</td>
+      <td>{{dstinfo}}</td>
+      <td>{{arrive}}</td>
+      <td>{{noticket}}</td>
+      <td>{{info}}</td>
+
+  </tr>
+
+
+</table>
+
+
+        </div>
+
+
+    </div>
+</div>
+</html>
