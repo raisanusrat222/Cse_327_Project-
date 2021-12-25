@@ -64,4 +64,39 @@ def AfterTickets(request):
                                                              "noticket":Nticket,
                                                              "arrive":time,
                                                              "tname":name})
+def CancelTickets(request):
 
+    return render(request, 'Ticket/CancelTicket.html', {})
+
+
+def AfterCancelTickets(request):
+    canceldata = TicketSell.objects.all()
+    ticketID = request.POST.get("ticket")
+    date = request.POST.get("date")
+    email = request.POST.get("email")
+    name = canceldata.filter(ticketNo=ticketID, date=date, email=email)
+    name.delete()
+    send_mail('Your Ticket is Cancelled!!',
+              'Your ticket scheduled on {} is Cancelled. - Dhaka Metro Rail'.format(date),
+              'dhaka.metroraill@gmail.com', [email], fail_silently=False)
+
+    return render(request, 'Ticket/CancelTicket.html', {})
+
+def PostponeTickets(request):
+
+    return render(request, 'Ticket/PostponeTicket.html', {})
+
+def AfterPostponeTickets(request):
+    postponedata = TicketSell.objects.all()
+    ticketID = request.POST.get("ticket")
+    odate = request.POST.get("odate")
+    ndate = request.POST.get("ndate")
+    email = request.POST.get("email")
+    postponedata.filter(ticketNo=ticketID).update(date=ndate)
+
+
+    send_mail('Your Ticket is Postponed!!',
+              'Your ticket scheduled on {} is postponed to {}. - Dhaka Metro Rail'.format(odate,ndate),
+              'dhaka.metroraill@gmail.com', [email], fail_silently=False)
+
+    return render(request, 'Ticket/PostponeTicket.html', {})

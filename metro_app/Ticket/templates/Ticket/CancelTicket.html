@@ -2,7 +2,7 @@
 <html>
 <head>
     {% load static %}
-  <link rel="stylesheet" href="{% static 'SeeComplain.css' %}">
+  <link rel="stylesheet" href="{% static 'Ticket.css' %}">
 </head>
 <div class="wrapper">
   <div class="Container">
@@ -22,44 +22,22 @@
                 </ul>
             </div>
         </div>
-  <div>
+  <div class="container2">
+  <form method="post" action="{% url 'AfterCancelTickets' %}">
+      {% csrf_token %}
+   <label for="ticket"></label>
+    <input type="number" id="ticket" name="ticket" placeholder="ticket ID...">
+      <label for="date"></label>
+      <br>
+    <input type="date" id="date" name="date" placeholder="Travel Date...">
+    <br>
+    <label for="email"></label>
+    <input type="email" id="email" name="email" placeholder="Your Email..">
+    <br>
 
-
-<table>
-
-  <tr>
-
-      <th>Train</th>
-      <th>Source</th>
-      <th>Destination</th>
-
-
-  </tr>
-  <tr>
-      <td>{{tname}}</td>
-      <td>{{srcinfo}}</td>
-      <td>{{dstinfo}}</td>
-
-
-  </tr>
-    <tr>
-    <th>Arrival</th>
-      <th>No.of Tickets</th>
-      <th>Total Amount</th>
-    </tr>
-
-    <tr>
-
-      <td>{{arrive}}</td>
-      <td>{{noticket}}</td>
-      <td>{{info}}</td>
-
-  </tr>
-
-</table>
-
-
-        </div>
+    <input type="submit" value="Submit">
+  </form>
+</div>
 
 
     </div>

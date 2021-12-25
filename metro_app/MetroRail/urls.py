@@ -26,5 +26,9 @@ urlpatterns = [
     path('SeeComplains/', views.SeeComplains),
     path('BuyTickets/', views.BuyTickets),
     path('AfterTickets/', views.AfterTickets, name="AfterTickets"),
+    path('CancelTickets/', views.CancelTickets),
+    path('AfterCancelTickets/', views.AfterCancelTickets, name="AfterCancelTickets"),
+    path('PostponeTickets/', views.PostponeTickets),
+    path('AfterPostponeTickets/', views.AfterPostponeTickets, name="AfterPostponeTickets"),
 
 ]
