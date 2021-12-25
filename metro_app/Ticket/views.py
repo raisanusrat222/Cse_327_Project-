@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
 from .models import Trainfare
 from .models import Complain
 from .models import TicketSell
@@ -54,6 +55,7 @@ def AfterTickets(request):
     N=total*2
     Ticket_info = TicketSell(ticketSource=src, ticketDestination=dst, date=date,noOfTicket=Nticket,email=email,total=N)
     Ticket_info.save()
+    send_mail('Your Ticket is Ready!!', 'Your ticket for {} is confirmed.You have booked {} tickets.You can travel on {}.'.format(name,Nticket,date), 'dhaka.metroraill@gmail.com', [email], fail_silently=False)
 
     return render(request, 'Ticket/ShowTicketDetails.html', {"info":N,
                                                              "srcinfo":src,
