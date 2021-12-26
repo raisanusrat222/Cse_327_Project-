@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="{% static 'admin.css' %}">
+    <!-- <link rel="stylesheet" href="/static/admin.css"> -->
+
+
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="Container">
+          <div class="nav">
+              <div class="logo">
+                  Dhaka <br> Metro Rail
+              </div>
+              <div class="menu">
+                  <ul class="navMenu">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Ticket</a></li>
+                      <li><a href="#">Schedule</a></li>
+                      <li><a href="#">Fare</a></li>
+                        <li><a href="#">About US</a></li>
+                      <li><a href="#">Login</a></li>
+                      <li><a href="#">Registration</a></li>
+
+
+                  </ul>
+
+              </div>
+          </div>
+
+      </div>
+
+  </div>
+  <div class="containter">
+    <div class="admin">
+      <h4> Welcome Back Admin</h4> <br>
+
+      <div class="dropdown">
+        <button class="dropbtn">Sell History</button>
+        <div class="dropdown-content">
+          <a href="{% url 'usticket' %}">User Ticket</a>
+          <a href="employee_ticket.html">Employee Ticket</a>
+          <a href="{% url 'preticket' %}">Premium Ticket</a>
+        </div>
+      </div>
+
+      <a class="complain-box">Complain Box</a>
+
+    </div>
+
+</body>
+</html>
