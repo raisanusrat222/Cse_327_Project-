@@ -41,7 +41,6 @@ def BuyTickets(request):
 
     return render(request, 'Ticket/BuyTicket.html', {})
 
-
 def AfterTickets(request):
     tiketdata = Trainfare.objects.all()
     src = request.POST.get("source")
@@ -52,12 +51,12 @@ def AfterTickets(request):
     name = tiketdata.filter(trainsource=src).values_list('trainname', flat=True).first()
     time=tiketdata.filter(trainsource=src).values_list('trainarrival', flat=True).first()
     total=tiketdata.filter(trainsource=src).values_list('trainfare', flat=True).first()
-    N=total*2
-    Ticket_info = TicketSell(ticketSource=src, ticketDestination=dst, date=date,noOfTicket=Nticket,email=email,total=N)
+
+    Ticket_info = TicketSell(ticketSource=src, ticketDestination=dst, date=date,noOfTicket=Nticket,email=email,total=total)
     Ticket_info.save()
     send_mail('Your Ticket is Ready!!', 'Your ticket for {} is confirmed.You have booked {} tickets.You can travel on {}.'.format(name,Nticket,date), 'dhaka.metroraill@gmail.com', [email], fail_silently=False)
 
-    return render(request, 'Ticket/ShowTicketDetails.html', {"info":N,
+    return render(request, 'Ticket/ShowTicketDetails.html', {"info":total,
                                                              "srcinfo":src,
                                                              "dstinfo":dst,
                                                              "emailinfo":email,
@@ -100,3 +99,6 @@ def AfterPostponeTickets(request):
               'dhaka.metroraill@gmail.com', [email], fail_silently=False)
 
     return render(request, 'Ticket/PostponeTicket.html', {})
+def TicketMenu(request):
+
+    return render(request, 'Ticket/TicketMenu.html', {})

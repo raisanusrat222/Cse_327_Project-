@@ -24,11 +24,12 @@ urlpatterns = [
     path('Complains/', views.Complains),
     path('AfterComplain/', views.AfterComplain, name="AfterComplain"),
     path('SeeComplains/', views.SeeComplains),
-    path('BuyTickets/', views.BuyTickets),
+    path('BuyTickets/', views.BuyTickets,name="BuyTickets"),
     path('AfterTickets/', views.AfterTickets, name="AfterTickets"),
-    path('CancelTickets/', views.CancelTickets),
+    path('CancelTickets/', views.CancelTickets,name="CancelTickets"),
     path('AfterCancelTickets/', views.AfterCancelTickets, name="AfterCancelTickets"),
-    path('PostponeTickets/', views.PostponeTickets),
+    path('PostponeTickets/', views.PostponeTickets,name="PostponeTickets"),
     path('AfterPostponeTickets/', views.AfterPostponeTickets, name="AfterPostponeTickets"),
+    path('TicketMenu/', views.TicketMenu,name="TicketMenu"),
 
 ]

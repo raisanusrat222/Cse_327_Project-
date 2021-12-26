@@ -121,7 +121,7 @@ STATIC_URL = 'static/'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'dhaka.metroraill@gmail.com'
-EMAIL_HOST_PASSWORD = 'Metr@123'
+EMAIL_HOST_PASSWORD = 'Metr@12345'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
