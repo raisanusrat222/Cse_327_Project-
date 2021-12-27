@@ -1,0 +1,77 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(7, 7, 102);
+    /*border-bottom: 1px solid #19004d;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  
+  }
+  .logo {
+  
+    height: 70px;
+  font-family: "Abel", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: .5rem;
+  color: white;
+  padding: 15px;
+  background-color: rgb(7, 7, 102);
+  }
+  .menu ul li {
+    display: inline-block;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    transition: 0.5s ease;
+  }
+  .menu ul li a:hover {
+    border-color: white;
+  }
+  .menu ul li:nth-child(6) a {
+    color: white;
+    
+  
+  
+  }
+  .menu ul li:nth-child(6) a:hover {
+    color: white;
+
+  }
+  .menu ul li:nth-child(7) a {
+    color: white;
+  }
+  .menu ul li:nth-child(7) a:hover {
+    color: white;
+    
+  }
+h1{
+    color: red;
+}
+.p{  
+
+    font-size: 500px;
+    color: rgb(69, 17, 226);
+}
+.content{
+      
+    background:#83acf8;
+    width: 60%;
+    padding: 5%;
+    margin: 20px auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
