@@ -1,4 +1,6 @@
 from django.db import models
+from datetime import datetime, date
+
 
     
     
@@ -10,6 +12,8 @@ class Premium_Member(models.Model):
     NID = models.CharField(max_length=30,default='',null=False)
     Package = models.CharField(max_length=30, default='', null=False)        
     Pay_With = models.CharField(max_length=30)       
-    Card_Num = models.CharField(max_length=30,default='',null=False)     
+    Card_Num = models.CharField(max_length=30,default='',null=False)
+    Start_Date = models.DateTimeField(auto_now=True)  
+    Card_Status = models.CharField(max_length=15, default='')  
      
        

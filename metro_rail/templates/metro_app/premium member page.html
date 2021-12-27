@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Member Page</title>
-    <link rel="stylesheet" href="{% static 'premium-member-page.css' %}">
+    <link rel="stylesheet" href="{% static 'premium_member_page.css' %}">
     <!-- <link rel="stylesheet" href="/static/premium member page.css"> -->
 
 </head>
@@ -25,8 +25,8 @@
                       <li><a href="#">Schedule</a></li>
                       <li><a href="#">Fare</a></li>
                         <li><a href="#">About US</a></li>
-                      <li><a href="#">Login</a></li>
-                      <li><a href="#">Registration</a></li>
+                      <li> {{user.username}} </li>
+                      <li><a href="{% url 'logout' %}">Logout</a></li>
 
 
                   </ul>
@@ -43,6 +43,7 @@
         <a id="pack">Packages</a>
         <a id="afc">Apply For Card</a>
         <a id="rcp">Renew Current Package</a>
+       
       </div>
 
             <div id="table-cont">
@@ -50,23 +51,16 @@
                 <tr>
                   <th>Current Packages</th>
                   <th>End date</th>
+                  <th>Card Status</th>
 
                 </tr>
                 <tr>
-                  <td>Monthly</td>
-                  <td>20/12/2021</td>
+                  <td>{{info.Package}}</td>
+                  <td>{{Edate}}</td>
+                  <td> {{info.Card_Status}} </td>
 
                 </tr>
-                <tr>
-                  <td> -- </td>
-                  <td> -- </td>
-
-                </tr>
-                <tr>
-                  <td> -- </td>
-                  <td> -- </td>
-
-                </tr>
+               
 
 
               </table>
@@ -78,40 +72,51 @@
         <div id="rn-ac" class="rn-ac">
           <div class="rnn">
             <a href="rn.html">Renew Package</a>
+            {% for message in messages %}
+               <p id="messages">{{message}}</p>
+            {% endfor %}
+            
           </div>
-          <div class="sub">
-            <label for="">Apply for card</label>
-            <input type="submit">
-          </div>
+          
+          <form action="" method="post">
+            {% csrf_token %}
+            <div class="sub">
+              <input type="checkbox" id="ac" name="card" value="applied for card">
+              <label for="">Apply for card</label>
+              <input type="submit">
+            </div>
+         </form>
         </div>
 
 
+        <form action="" method="post">
+          {% csrf_token %}
+          <div id="bigp" class="bigp">
+            <div class="package-selection">
+              <div class="ch">
+                <input type="checkbox" id="rp" name="rpac" value="renew_package">
+                <label for="p">Renew Current Package</label>
+              </div>
+              <div class="pps">
+                <label for="">Select New Package</label>
+                <select name="pay" id="p">
+                  <option value="none">None</option>
+                  <option value="Monthly-1000BDT">Monthly-1000BDT</option>
+                  <option value="Half-Yearly-4500BDT">Half-Yearly-4500BDT</option>
+                  <option value="Yearly-8000BDT">Yearly-8000BDT</option>
+                </select>
 
-        <div id="bigp" class="bigp">
-          <div class="package-selection">
-            <div class="ch">
-              <input type="checkbox" id="pac" name="vehicle1" value="p">
-              <label for="p">Renew Current Package</label>
+              </div>
+
+
             </div>
-            <div class="pps">
-              <label for="">Select New Package</label>
-              <select name="pay" id="pay">
-                <option value="none">None</option>
-                <option value="Monthly-1000BDT">Monthly-1000BDT</option>
-                <option value="Half-Yearly-4500BDT">Half-Yearly-4500BDT</option>
-                <option value="Yearly-8000BDT">Yearly-8000BDT</option>
-              </select>
-
+            <br>
+            <div class="confirm">
+              <input type="submit" value="Confirm">
             </div>
-
 
           </div>
-          <br>
-          <div class="confirm">
-            <input type="submit" value="Confirm">
-          </div>
-
-        </div>
+       </form>
 
     </div>
 
