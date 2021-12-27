@@ -31,5 +31,6 @@ urlpatterns = [
     path('PostponeTickets/', views.PostponeTickets,name="PostponeTickets"),
     path('AfterPostponeTickets/', views.AfterPostponeTickets, name="AfterPostponeTickets"),
     path('TicketMenu/', views.TicketMenu,name="TicketMenu"),
+    path('GenTicket/', views.GenTicket, name="GenTicket"),
 
 ]

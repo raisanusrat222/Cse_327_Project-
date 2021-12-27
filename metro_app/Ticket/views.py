@@ -3,6 +3,14 @@ from django.core.mail import send_mail
 from .models import Trainfare
 from .models import Complain
 from .models import TicketSell
+from django.http import FileResponse
+import io
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import inch
+from reportlab.lib.pagesizes import letter
+
+
+
 import math
 # Create your views here.
 def Ticket(request):
@@ -102,3 +110,52 @@ def AfterPostponeTickets(request):
 def TicketMenu(request):
 
     return render(request, 'Ticket/TicketMenu.html', {})
+
+def GenTicket(request):
+    buf =io.BytesIO()
+    c = canvas.Canvas(buf, pagesize=letter, bottomup=0)
+    textob = c.beginText()
+    textob.setTextOrigin(inch, inch)
+    textob.setFont("Helvetica",14)
+
+    ticdata = TicketSell.objects.all()
+    Id = ticdata.last()
+    s = Id.ticketNo
+    a = str(s)
+    d = Id.date
+    ds = str(d)
+    p = Id.total
+    ps = str(p)
+    lines = []
+
+    lines.append("DHAKA     METRO    RAIL")
+    lines.append("T I C K E T")
+    lines.append("=====================================================")
+    lines.append("Ticket No:")
+    lines.append(a)
+    lines.append(" ")
+    lines.append("Source:")
+    lines.append(Id.ticketSource)
+    lines.append(" ")
+    lines.append("Destination:")
+    lines.append(Id.ticketDestination)
+    lines.append(" ")
+    lines.append("Date:")
+    lines.append(ds)
+    lines.append(" ")
+    lines.append("Fare:")
+    lines.append(ps)
+    lines.append(" ")
+    lines.append("=====================================================")
+
+
+    for line in lines:
+        textob.textLine(line)
+
+    c.drawText(textob)
+    c.showPage()
+    c.save()
+    buf.seek(0)
+
+    return FileResponse(buf, as_attachment=True, filename='Ticket.pdf')
+

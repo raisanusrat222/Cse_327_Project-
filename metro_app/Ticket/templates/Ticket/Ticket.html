@@ -22,26 +22,6 @@
                 </ul>
             </div>
         </div>
-  <div class="content">
-      <h2>Train Schedule</h2>
-
-<table>
-  <tr>
-      <th>Train Name</th>
-      <th>Source</th>
-      <th>Destination</th>
-      <th>Fare</th>
-  </tr>
-    {% for trainid in traininfo %}
-  <tr>
-      <td>{{ trainid.trainname }}</td>
-      <td>{{ trainid.trainsource }}</td>
-      <td>{{ trainid.traindestination }}</td>
-    <td>{{ trainid.trainfare }}</td>
-  </tr>
-     {% endfor %}
-
-</table>
 
 
         </div>
