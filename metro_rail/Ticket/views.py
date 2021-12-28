@@ -11,6 +11,7 @@ from reportlab.lib.pagesizes import letter
 
 
 
+
 import math
 # Create your views here.
 def Ticket(request):

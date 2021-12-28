@@ -1,5 +1,5 @@
 """
-WSGI config for MetroRail project.
+WSGI config for metro_rail project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MetroRail.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'metro_rail.settings')
 
 application = get_wsgi_application()
