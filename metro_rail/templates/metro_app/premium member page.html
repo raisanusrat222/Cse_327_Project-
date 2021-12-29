@@ -71,20 +71,27 @@
 
         <div id="rn-ac" class="rn-ac">
           <div class="rnn">
-            <a href="rn.html">Renew Package</a>
-            {% for message in messages %}
-               <p id="messages">{{message}}</p>
-            {% endfor %}
+            
+           
             
           </div>
           
           <form action="" method="post">
             {% csrf_token %}
             <div class="sub">
-              <input type="checkbox" id="ac" name="card" value="applied for card">
-              <label for="">Apply for card</label>
-              <input type="submit">
+              <div class="c1">
+                <input type="checkbox" id="ac" name="card" value="applied for card">
+              </div>
+              <div class="c2">
+                <label for="">Apply for card</label>
+              </div>
+              <div class="c3">
+                <input type="submit">
+              </div>
             </div>
+            {% for message in messages %}
+              <p id="messages">{{message}}</p>
+            {% endfor %}
          </form>
         </div>
 
@@ -98,13 +105,34 @@
                 <label for="p">Renew Current Package</label>
               </div>
               <div class="pps">
-                <label for="">Select New Package</label>
-                <select name="pay" id="p">
-                  <option value="none">None</option>
-                  <option value="Monthly-1000BDT">Monthly-1000BDT</option>
-                  <option value="Half-Yearly-4500BDT">Half-Yearly-4500BDT</option>
-                  <option value="Yearly-8000BDT">Yearly-8000BDT</option>
-                </select>
+                <div class="l">
+                  <label for="">Select New Package :</label>
+                </div> 
+                <div class="package-selection2">
+                  
+                  <div id="package-slider">
+                        <div class="r1">
+                          <input type="radio" name="package-amount" id="1" value="Monthly-1000 BDT" >
+                        </div>
+                        <div class="r2">
+                          <input type="radio" name="package-amount" id="2" value="Half Yearly-4500 BDT" >
+                        </div> 
+                        <div class="r3">
+                          <input type="radio" name="package-amount" id="3" value="Yearly-8000 BDT" >
+                        </div>
+                  </div>
+                  <div class="package-name">
+                       <div class="p1">
+                          <label for="1" amount=" 1000 BDT">Monthly &nbsp; 1000 BDT</br></label>
+                      </div>
+                      <div class="p2">  
+                          <label for="2" amount="4500 BDT">Half-Yearly &nbsp; 4500 BDT</br></label>
+                      </div>
+                      <div class="p3">
+                          <label for="3" amount="8000 BDT">Yearly &nbsp; 8000 BDT </br></label>
+                      </div>
+                  </div>
+               </div>
 
               </div>
 

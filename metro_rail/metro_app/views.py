@@ -112,20 +112,12 @@ def empregister(request):
 @login_required
 def PremiumPage(request):
 
+    
+
     current_user = request.user
     user_name = current_user.username
 
     info = Premium_Member.objects.get(User_Name = user_name)
-
-    Edate = info.Start_Date 
-
-    if info.Package == 'Monthly-1000 BDT':
-        Edate = Edate + timedelta(days = 30)
-        
-    if info.Package == 'Half Yearly-4500 BDT': 
-        Edate = Edate + timedelta(days = 180)
-    if info.Package == 'Yearly-8000 BDT':
-         Edate = Edate + timedelta(days = 365) 
 
     if request.method == 'POST':
         if request.POST.get('card'):
@@ -135,23 +127,36 @@ def PremiumPage(request):
             else:
                 messages.error(request,'already appied for card')
 
-        if request.POST.get('rpac') or request.POST.get('pay'):
-            s = request.POST.get('pay')
-            if request.POST.get('rpac'):
-                info.Package =  info.Package                
-                info.save()  
-                return redirect('PremiumPage') 
-            else:
-                messages.error(request,'nothing')
+        if request.POST.get('rpac'):
+                       
+            info.Package =  info.Package                
+            info.save()  
+            return redirect('PremiumPage') 
+        # else:
+        #     messages.error(request,'nothing')
 
-            if s == 'none':
-                 messages.error(request,'nothing')
-            else:    
-                info.Package = request.POST.get('pay')                    
-                info.save()
-                return redirect('PremiumPage')
+        if request.POST.get('package-amount'):
+            info.Package = request.POST.get('package-amount') 
+            info.save()
+            return redirect('PremiumPage')   
+
+        # else:
+        #     return redirect('PremiumPage')         
                 
+                     
+ 
+    # info = Premium_Member.objects.get(User_Name = user_name)              
+
+    Edate = info.Start_Date 
+
+    if info.Package == 'Monthly-1000 BDT':
+        Edate = Edate + timedelta(days = 30)
         
+    if info.Package == 'Half Yearly-4500 BDT': 
+        Edate = Edate + timedelta(days = 180)
+    if info.Package == 'Yearly-8000 BDT':
+         Edate = Edate + timedelta(days = 365)  
+
      
 
     context = {'info': info, 'Edate': Edate}
