@@ -7,11 +7,12 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required 
 
-from .models import Premium_Member
+from .models import Premium_Member, Employee
 from django.contrib.auth.models import User
 from .forms import PM_RegForm
+from .forms import EM_RegForm
 from datetime import  timedelta, datetime
-from django.utils import timezone
+
  
 
 
@@ -91,6 +92,43 @@ def pregister(request):
     context={'form': form}
     return render(request, 'metro_app/pregister.html', context)
    
+
+def empregister(request):
+    c = False
+    if request.user.is_authenticated:
+        return redirect('login')
+    else:   
+        form = EM_RegForm()
+
+        if request.method == 'POST':
+            form = EM_RegForm(request.POST) 
+            obj = Employee()
+                
+            if form.is_valid():
+                obj.User_Name = form.cleaned_data['username']
+                form.save()
+                c = True 
+            
+            First_name = request.POST['First Name']
+            Last_name = request.POST['Last Name']
+            phone = request.POST['Phone Number']
+            nid = request.POST['NID']
+            address = request.POST['Address']
+
+        
+            
+            obj.First_Name = First_name
+            obj.Last_Name =  Last_name
+            obj.Phone_Number =  phone
+            obj.NID = nid
+            obj.Address = address
+               
+            if c == True:
+                obj.save()
+                return redirect('login')
+
+    context={'form': form}
+    return render(request, 'metro_app/empregister.html', context)
 
 @login_required
 def PremiumPage(request):
