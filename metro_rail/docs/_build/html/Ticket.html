@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Ticket package &#8212; metro_app 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="ticket-package">
+<h1>Ticket package<a class="headerlink" href="#ticket-package" title="Permalink to this headline">¶</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Ticket.migrations.html">Ticket.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Ticket.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ticket.migrations.html#module-Ticket.migrations.0001_initial">Ticket.migrations.0001_initial module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ticket.migrations.html#module-Ticket.migrations.0002_complain">Ticket.migrations.0002_complain module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ticket.migrations.html#module-Ticket.migrations.0003_ticketsell">Ticket.migrations.0003_ticketsell module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ticket.migrations.html#module-Ticket.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-Ticket.admin">
+<span id="ticket-admin-module"></span><h2>Ticket.admin module<a class="headerlink" href="#module-Ticket.admin" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Ticket.admin.ComplainAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Ticket.admin.</span></span><span class="sig-name descname"><span class="pre">ComplainAdmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.admin.ComplainAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.admin.ComplainAdmin.list_display">
+<span class="sig-name descname"><span class="pre">list_display</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['ComplainNo',</span> <span class="pre">'Complainer',</span> <span class="pre">'Contact',</span> <span class="pre">'Complain']</span></em><a class="headerlink" href="#Ticket.admin.ComplainAdmin.list_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="Ticket.admin.ComplainAdmin.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#Ticket.admin.ComplainAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Ticket.admin.TicketSellAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Ticket.admin.</span></span><span class="sig-name descname"><span class="pre">TicketSellAdmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.admin.TicketSellAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.admin.TicketSellAdmin.list_display">
+<span class="sig-name descname"><span class="pre">list_display</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['ticketNo',</span> <span class="pre">'ticketSource',</span> <span class="pre">'ticketDestination',</span> <span class="pre">'date',</span> <span class="pre">'noOfTicket',</span> <span class="pre">'total',</span> <span class="pre">'email']</span></em><a class="headerlink" href="#Ticket.admin.TicketSellAdmin.list_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="Ticket.admin.TicketSellAdmin.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#Ticket.admin.TicketSellAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Ticket.admin.TrainFareAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Ticket.admin.</span></span><span class="sig-name descname"><span class="pre">TrainFareAdmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.admin.TrainFareAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.admin.TrainFareAdmin.list_display">
+<span class="sig-name descname"><span class="pre">list_display</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['trainid',</span> <span class="pre">'trainname',</span> <span class="pre">'trainsource',</span> <span class="pre">'traindestination',</span> <span class="pre">'trainarrival',</span> <span class="pre">'trainreach',</span> <span class="pre">'trainfare']</span></em><a class="headerlink" href="#Ticket.admin.TrainFareAdmin.list_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="Ticket.admin.TrainFareAdmin.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#Ticket.admin.TrainFareAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Ticket.apps">
+<span id="ticket-apps-module"></span><h2>Ticket.apps module<a class="headerlink" href="#module-Ticket.apps" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Ticket.apps.TicketConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Ticket.apps.</span></span><span class="sig-name descname"><span class="pre">TicketConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.apps.TicketConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.apps.config.AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.apps.TicketConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#Ticket.apps.TicketConfig.default_auto_field" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.apps.TicketConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Ticket'</span></em><a class="headerlink" href="#Ticket.apps.TicketConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Ticket.forms">
+<span id="ticket-forms-module"></span><h2>Ticket.forms module<a class="headerlink" href="#module-Ticket.forms" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-Ticket.models">
+<span id="ticket-models-module"></span><h2>Ticket.models module<a class="headerlink" href="#module-Ticket.models" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Ticket.models.Complain">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Ticket.models.</span></span><span class="sig-name descname"><span class="pre">Complain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ComplainNo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Complainer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Contact</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Complain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.models.Complain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.Complain.Complain">
+<span class="sig-name descname"><span class="pre">Complain</span></span><a class="headerlink" href="#Ticket.models.Complain.Complain" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.Complain.ComplainNo">
+<span class="sig-name descname"><span class="pre">ComplainNo</span></span><a class="headerlink" href="#Ticket.models.Complain.ComplainNo" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.Complain.Complainer">
+<span class="sig-name descname"><span class="pre">Complainer</span></span><a class="headerlink" href="#Ticket.models.Complain.Complainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.Complain.Contact">
+<span class="sig-name descname"><span class="pre">Contact</span></span><a class="headerlink" href="#Ticket.models.Complain.Contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Ticket.models.Complain.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#Ticket.models.Complain.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Ticket.models.Complain.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#Ticket.models.Complain.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.Complain.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#Ticket.models.Complain.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Ticket.models.TicketSell">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Ticket.models.</span></span><span class="sig-name descname"><span class="pre">TicketSell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticketNo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticketSource</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticketDestination</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noOfTicket</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.models.TicketSell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="Ticket.models.TicketSell.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#Ticket.models.TicketSell.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Ticket.models.TicketSell.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#Ticket.models.TicketSell.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TicketSell.date">
+<span class="sig-name descname"><span class="pre">date</span></span><a class="headerlink" href="#Ticket.models.TicketSell.date" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TicketSell.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#Ticket.models.TicketSell.email" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Ticket.models.TicketSell.get_next_by_date">
+<span class="sig-name descname"><span class="pre">get_next_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.models.TicketSell.get_next_by_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Ticket.models.TicketSell.get_previous_by_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.models.TicketSell.get_previous_by_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TicketSell.noOfTicket">
+<span class="sig-name descname"><span class="pre">noOfTicket</span></span><a class="headerlink" href="#Ticket.models.TicketSell.noOfTicket" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TicketSell.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#Ticket.models.TicketSell.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TicketSell.ticketDestination">
+<span class="sig-name descname"><span class="pre">ticketDestination</span></span><a class="headerlink" href="#Ticket.models.TicketSell.ticketDestination" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TicketSell.ticketNo">
+<span class="sig-name descname"><span class="pre">ticketNo</span></span><a class="headerlink" href="#Ticket.models.TicketSell.ticketNo" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TicketSell.ticketSource">
+<span class="sig-name descname"><span class="pre">ticketSource</span></span><a class="headerlink" href="#Ticket.models.TicketSell.ticketSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TicketSell.total">
+<span class="sig-name descname"><span class="pre">total</span></span><a class="headerlink" href="#Ticket.models.TicketSell.total" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Ticket.models.TrainFare">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Ticket.models.</span></span><span class="sig-name descname"><span class="pre">TrainFare</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trainid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trainname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trainsource</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traindestination</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trainarrival</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trainreach</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trainfare</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.models.TrainFare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="Ticket.models.TrainFare.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#Ticket.models.TrainFare.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Ticket.models.TrainFare.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#Ticket.models.TrainFare.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TrainFare.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#Ticket.models.TrainFare.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TrainFare.trainarrival">
+<span class="sig-name descname"><span class="pre">trainarrival</span></span><a class="headerlink" href="#Ticket.models.TrainFare.trainarrival" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TrainFare.traindestination">
+<span class="sig-name descname"><span class="pre">traindestination</span></span><a class="headerlink" href="#Ticket.models.TrainFare.traindestination" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TrainFare.trainfare">
+<span class="sig-name descname"><span class="pre">trainfare</span></span><a class="headerlink" href="#Ticket.models.TrainFare.trainfare" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TrainFare.trainid">
+<span class="sig-name descname"><span class="pre">trainid</span></span><a class="headerlink" href="#Ticket.models.TrainFare.trainid" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TrainFare.trainname">
+<span class="sig-name descname"><span class="pre">trainname</span></span><a class="headerlink" href="#Ticket.models.TrainFare.trainname" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TrainFare.trainreach">
+<span class="sig-name descname"><span class="pre">trainreach</span></span><a class="headerlink" href="#Ticket.models.TrainFare.trainreach" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ticket.models.TrainFare.trainsource">
+<span class="sig-name descname"><span class="pre">trainsource</span></span><a class="headerlink" href="#Ticket.models.TrainFare.trainsource" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Ticket.tests">
+<span id="ticket-tests-module"></span><h2>Ticket.tests module<a class="headerlink" href="#module-Ticket.tests" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-Ticket.utils">
+<span id="ticket-utils-module"></span><h2>Ticket.utils module<a class="headerlink" href="#module-Ticket.utils" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-Ticket.views">
+<span id="ticket-views-module"></span><h2>Ticket.views module<a class="headerlink" href="#module-Ticket.views" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Ticket.views.aftercanceltickets">
+<span class="sig-prename descclassname"><span class="pre">Ticket.views.</span></span><span class="sig-name descname"><span class="pre">aftercanceltickets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.views.aftercanceltickets" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to Cancel the ticket and Send a email.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a CancelTicket Page which is a HTML page and Sends an email.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Ticket.views.aftercomplain">
+<span class="sig-prename descclassname"><span class="pre">Ticket.views.</span></span><span class="sig-name descname"><span class="pre">aftercomplain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.views.aftercomplain" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to Submit the Complain page in Database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns to a blank Complain Page again which is a HTML page and delivers a message.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Ticket.views.afterpostponetickets">
+<span class="sig-prename descclassname"><span class="pre">Ticket.views.</span></span><span class="sig-name descname"><span class="pre">afterpostponetickets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.views.afterpostponetickets" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to Postpone trip of user and update Database.Also sends a confirmation email.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a PostponeTicket Page which is a HTML page and Sends an Email.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Ticket.views.aftertickets">
+<span class="sig-prename descclassname"><span class="pre">Ticket.views.</span></span><span class="sig-name descname"><span class="pre">aftertickets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.views.aftertickets" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to Save details required to buy ticket in Database and send a confirmation email to user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a ShowTicketDetails page which is a HTML page and Sends an Email.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Ticket.views.buytickets">
+<span class="sig-prename descclassname"><span class="pre">Ticket.views.</span></span><span class="sig-name descname"><span class="pre">buytickets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.views.buytickets" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to view the BuyTicket page.User buys ticket online using this page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a BuyTicket page which is a HTML page.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Ticket.views.canceltickets">
+<span class="sig-prename descclassname"><span class="pre">Ticket.views.</span></span><span class="sig-name descname"><span class="pre">canceltickets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.views.canceltickets" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to view the Cancel ticket Form. User put their ticket Id to cancel their ticket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a CancelTicket Page which is a HTML page.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Ticket.views.complains">
+<span class="sig-prename descclassname"><span class="pre">Ticket.views.</span></span><span class="sig-name descname"><span class="pre">complains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.views.complains" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to view the Complain Form page.User submit their complain in the Form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a Complain Page which is a HTML page.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Ticket.views.fare">
+<span class="sig-prename descclassname"><span class="pre">Ticket.views.</span></span><span class="sig-name descname"><span class="pre">fare</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.views.fare" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to view the Fare Chart page.If we search using a Source and Destination</p>
+<p>it will return the Fare for that specific route.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a Fare page which is a HTML page.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Ticket.views.genticket">
+<span class="sig-prename descclassname"><span class="pre">Ticket.views.</span></span><span class="sig-name descname"><span class="pre">genticket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.views.genticket" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to generate ticket pdf for use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>FileResponse.</em>) – it’s a FileResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a Ticket.pdf which is a Pdf File.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>FileResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Ticket.views.postponetickets">
+<span class="sig-prename descclassname"><span class="pre">Ticket.views.</span></span><span class="sig-name descname"><span class="pre">postponetickets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.views.postponetickets" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to view the Postpone ticket Form. User puts their ticketId and Dates to postpone their trip.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a PostponeTicket Page which is a HTML page.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Ticket.views.seecomplains">
+<span class="sig-prename descclassname"><span class="pre">Ticket.views.</span></span><span class="sig-name descname"><span class="pre">seecomplains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.views.seecomplains" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to view complain the login page to the Adminstrator. Administrator can see all submitted complains here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a SeeComplain Page which is a HTML page.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Ticket.views.ticket">
+<span class="sig-prename descclassname"><span class="pre">Ticket.views.</span></span><span class="sig-name descname"><span class="pre">ticket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.views.ticket" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to view the Home.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a Home Page which is a HTML page.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Ticket.views.ticketmenu">
+<span class="sig-prename descclassname"><span class="pre">Ticket.views.</span></span><span class="sig-name descname"><span class="pre">ticketmenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ticket.views.ticketmenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to view the TicketMenu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a TicketMenu Page which is a HTML page.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-Ticket">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Ticket" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">metro_app</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Fahim Hassan.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/Ticket.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,6 +1,6 @@
 from django.db import models
 # Create your models here.
-class Trainfare(models.Model):
+class TrainFare(models.Model):
     trainid = models.IntegerField(primary_key=True)
     trainname = models.CharField(max_length=70)
     trainsource = models.CharField(max_length=70)
