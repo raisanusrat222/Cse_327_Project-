@@ -22,28 +22,7 @@ def nav(request):
     return render(request,'metro_app/nav.html',context=diction)
 
 
-def loginPage(request):
-    if request.user.is_authenticated:
-        return redirect('PremiumPage')
-    else:
-         if request.method=='POST':
-             username =request.POST.get('username')
-             password =request.POST.get('password')
 
-             user= authenticate(request, username=username, password=password)
-
-             if user is not None:
-                 login(request,user)
-                 return redirect('PremiumPage')
-             else:
-                messages.info(request,'Username or Password is incorrect')
-
-    context= {}
-    return render(request,'metro_app/login.html',context)
-
-def logoutUser(request):
-    logout(request)
-    return redirect('login')
 
 
 
