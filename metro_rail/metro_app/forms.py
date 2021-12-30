@@ -6,6 +6,11 @@ from django import forms
 
 
 class RegForm(UserCreationForm):
+    """
+        This class is used to create the premium member and employee registration page.
+
+        :param request: it's a form request from user.
+    """
    
     username = forms.CharField(required=True, widget=forms.TextInput(attrs={"placeholder": "Enter User Name"}))
    

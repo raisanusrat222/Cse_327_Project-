@@ -6,7 +6,6 @@ from metro_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.nav,name="nav"),
     path('',include('metro_app.urls')),
  
     

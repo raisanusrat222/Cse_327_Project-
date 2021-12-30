@@ -16,17 +16,20 @@ from datetime import  timedelta, datetime
 
 
 # Create your views here.
-def nav(request):
-    diction= {}
-    return render(request,'metro_app/nav.html',context=diction)
-
-
-
-
-
-
 
 def pregister(request):
+    """
+        This method is used to view the register page for premium member. A user can get
+        registered as a premium member by filling the form with valid data.
+
+        :param request: it's a HttpResponse from user.
+
+        :type request: HttpResponse.
+
+        :return: this method returns a premium member ragistration page which is a HTML page.
+
+        :rtype: HttpResponse.
+    """
     is_form = False
     if request.user.is_authenticated:
         return redirect('login')
@@ -70,8 +73,6 @@ def pregister(request):
                 form.save()
                 is_form = True 
             
-            
-
             if is_form == True:
                 obj.save()
                 return redirect('login')
@@ -81,6 +82,18 @@ def pregister(request):
    
 
 def empregister(request):
+    """
+        This method is used to view the register page for Employee. An employee can be
+        registered by filling the form with valid data.
+
+        :param request: it's a HttpResponse from user.
+
+        :type request: HttpResponse.
+
+        :return: this method returns a employee ragistration page which is a HTML page.
+
+        :rtype: HttpResponse.
+    """
     is_form = False
     if request.user.is_authenticated:
         return redirect('login')
@@ -116,9 +129,7 @@ def empregister(request):
                 obj.User_Name = form.cleaned_data['username']
                 form.save()
                 is_form = True 
-            
-            
-               
+                          
             if is_form == True:
                 obj.save()
                 return redirect('login')
@@ -129,6 +140,18 @@ def empregister(request):
 
 @login_required
 def premiumpage(request):
+    """
+        This method is used to view the premium member page. A premium member can check his
+        current package also renew package and apply for card by logging in to his account.
+
+        :param request: it's a HttpResponse from user.
+
+        :type request: HttpResponse.
+
+        :return: this method returns a employee ragistration page which is a HTML page.
+
+        :rtype: HttpResponse.
+    """
     current_user = request.user
     user_name = current_user.username
 
@@ -169,20 +192,31 @@ def premiumpage(request):
 
 
 def TicketValid(request):
-    # if request.method=='POST':
-        search = request.POST.get('search')
-        ticket = TicketSell.objects.all() 
+    """
+        This method is used to view the ticket validation page for Employee. An employee
+         can check if a ticket has been sold or not by searching with ticket no.
+
+        :param request: it's a HttpResponse from user.
+
+        :type request: HttpResponse.
+
+        :return: this method returns a employee ragistration page which is a HTML page.
+
+        :rtype: HttpResponse.
+    """
+    search = request.POST.get('search')
+    ticket = TicketSell.objects.all() 
         
          
-        if search != '' and search is not None:
-            ticket = TicketSell.objects.filter(ticketNo=search)
-            if ticket:
-                messages.info(request, 'This ticket has been sold')
-                context = {'ticket': ticket,}
-                return render(request, 'metro_app/TicketValid.html', context)
-            else:
-                messages.info(request, 'This ticket has not been sold')               
-                return render(request, 'metro_app/TicketValid.html')
+    if search != '' and search is not None:
+        ticket = TicketSell.objects.filter(ticketNo=search)
+        if ticket:
+            messages.info(request, 'This ticket has been sold')
+            context = {'ticket': ticket,}
+            return render(request, 'metro_app/TicketValid.html', context)
         else:
-            
+            messages.info(request, 'This ticket has not been sold')               
             return render(request, 'metro_app/TicketValid.html')
+    else:
+            
+        return render(request, 'metro_app/TicketValid.html')
