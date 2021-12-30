@@ -21,13 +21,14 @@
               </div>
               <div class="menu">
                   <ul class="navMenu">
-                      <li><a href="#">Home</a></li>
+                      <li><a href="{% url 'nav' %}">Home</a></li>
                       <li><a href="#">Ticket</a></li>
-                      <li><a href="#">Schedule</a></li>
+                      <li><a href="{% url 'scheck' %}">Schedule</a></li>
                       <li><a href="#">Fare</a></li>
                         <li><a href="#">About US</a></li>
                       <li><a href="#">Login</a></li>
-                      <li><a href="#">Registration</a></li>
+                      
+                      <li><a href="{% url 'logout' %}">Logout</a></li>
 
 
                   </ul>
@@ -46,7 +47,7 @@
         <button class="dropbtn">Sell History</button>
         <div class="dropdown-content">
           <a href="{% url 'usticket' %}">User Ticket</a>
-          <a href="employee_ticket.html">Employee Ticket</a>
+          <a href="{% url 'empticket' %}">Employee Ticket</a>
           <a href="{% url 'preticket' %}">Premium Ticket</a>
         </div>
       </div>

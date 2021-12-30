@@ -42,8 +42,11 @@
             
             <div id="table">
                 <div class="search">
-                    <input id="in" type="date">
-                    <button type="submit" id="serBtn">Search</button>
+                    <form method="post" action="{% url 'usticket' %}">
+                        {% csrf_token %}
+                        <label for="date"></label>
+                        <input type="date" id="date" name="date" placeholder="Date">
+                        <input id="serBtn" type="submit" value="search">
                 </div>
                
                 <table id="tab">
@@ -56,10 +59,10 @@
                         <th>Total</th>
                         <th>Email</th>
                     </tr>
-                    {% for row in user_ticket %}
+                    {% for row in data %}
                     <tr>
                         
-                        <td>{{row.train_no}}</td>
+                        <td>{{row.ticket_no}}</td>
                         <td>{{row.source}}</td>
                         <td>{{row.destination}}</td>
                         <td>{{row.date}}</td>

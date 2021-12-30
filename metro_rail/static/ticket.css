@@ -227,32 +227,33 @@
     background-color: #333333;
   }
 
-  /* ------ Search CSS ----- */
+/* ------ Search CSS ----- */
 .search {
   margin-top: 140px;
   margin-right: auto;
   width: 100%;
   text-align: center;
 }
-#in {
+#date {
   font-size: 16px;
   padding: 8px;
   border: none;
 }
-#sub {
-  padding: 8px;
-  font-size: 16px;
-  border: none;
-  background-color: yellow;
-}
+
 #serBtn {
+  padding: 10px 8px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
   width: 10%;
   background-color: yellow;
   color: #333333;
+  transition: 0.2s;
 }
 #serBtn:hover {
   background-color: #333333;
   color: white;
 }
+  
 
   

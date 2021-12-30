@@ -42,10 +42,11 @@
             
             <div id="table">
                 <div class="search">
-                    <form method=" POST" action="{% url 'preticket' %}"></form>
-                    {% csrf_token %}
-                    <input id="in" name="q" type="date">
-                    <button type="submit" id="serBtn">Search</button>
+                    <form method="post" action="{% url 'preticket' %}">
+                        {% csrf_token %}
+                        <label for="date"></label>
+                        <input type="date" id="date" name="date" placeholder="Date">
+                        <input id="serBtn" type="submit" value="search">
                 </div>
                
                 <table id="tab">
@@ -62,7 +63,7 @@
                         <th>Card Num</th>
                         <th>Card Status</th>
                     </tr>
-                    {% for row in premium_ticket %}
+                    {% for row in data %}
                     <tr>
                         
                         <td>{{row.first_name}}</td>
@@ -83,6 +84,7 @@
                     {% endfor %}
 
                 </table>
+            </form>
                 
 
             </div>

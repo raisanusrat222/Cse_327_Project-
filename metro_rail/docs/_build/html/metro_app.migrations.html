@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>metro_app.migrations package &#8212; metro_rail 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="metro-app-migrations-package">
+<h1>metro_app.migrations package<a class="headerlink" href="#metro-app-migrations-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-metro_app.migrations.0001_initial">
+<span id="metro-app-migrations-0001-initial-module"></span><h2>metro_app.migrations.0001_initial module<a class="headerlink" href="#module-metro_app.migrations.0001_initial" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0001_initial.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0001_initial.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0001_initial.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0001_initial.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#metro_app.migrations.0001_initial.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0001_initial.Migration.initial">
+<span class="sig-name descname"><span class="pre">initial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#metro_app.migrations.0001_initial.Migration.initial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0001_initial.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;CreateModel</span>&#160; <span class="pre">name='schedule',</span> <span class="pre">fields=[('id',</span> <span class="pre">&lt;django.db.models.fields.BigAutoField&gt;),</span> <span class="pre">('route_id',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('source',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('destination',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('arrival_time',</span> <span class="pre">&lt;django.db.models.fields.TimeField&gt;),</span> <span class="pre">('departure_time',</span> <span class="pre">&lt;django.db.models.fields.TimeField&gt;)]&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0001_initial.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations.0002_rename_schedule_schedule_check">
+<span id="metro-app-migrations-0002-rename-schedule-schedule-check-module"></span><h2>metro_app.migrations.0002_rename_schedule_schedule_check module<a class="headerlink" href="#module-metro_app.migrations.0002_rename_schedule_schedule_check" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0002_rename_schedule_schedule_check.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0002_rename_schedule_schedule_check.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0002_rename_schedule_schedule_check.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0002_rename_schedule_schedule_check.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('metro_app',</span> <span class="pre">'0001_initial')]</span></em><a class="headerlink" href="#metro_app.migrations.0002_rename_schedule_schedule_check.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0002_rename_schedule_schedule_check.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;RenameModel</span>&#160; <span class="pre">old_name='schedule',</span> <span class="pre">new_name='schedule_check'&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0002_rename_schedule_schedule_check.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations.0003_user_ticket">
+<span id="metro-app-migrations-0003-user-ticket-module"></span><h2>metro_app.migrations.0003_user_ticket module<a class="headerlink" href="#module-metro_app.migrations.0003_user_ticket" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0003_user_ticket.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0003_user_ticket.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0003_user_ticket.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0003_user_ticket.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('metro_app',</span> <span class="pre">'0002_rename_schedule_schedule_check')]</span></em><a class="headerlink" href="#metro_app.migrations.0003_user_ticket.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0003_user_ticket.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;CreateModel</span>&#160; <span class="pre">name='user_ticket',</span> <span class="pre">fields=[('id',</span> <span class="pre">&lt;django.db.models.fields.BigAutoField&gt;),</span> <span class="pre">('route_id',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('train_no',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('name',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('email_address',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('phone_number',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('date',</span> <span class="pre">&lt;django.db.models.fields.DateTimeField&gt;)]&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0003_user_ticket.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations.0004_premium_ticket">
+<span id="metro-app-migrations-0004-premium-ticket-module"></span><h2>metro_app.migrations.0004_premium_ticket module<a class="headerlink" href="#module-metro_app.migrations.0004_premium_ticket" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0004_premium_ticket.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0004_premium_ticket.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0004_premium_ticket.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0004_premium_ticket.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('metro_app',</span> <span class="pre">'0003_user_ticket')]</span></em><a class="headerlink" href="#metro_app.migrations.0004_premium_ticket.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0004_premium_ticket.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;CreateModel</span>&#160; <span class="pre">name='premium_ticket',</span> <span class="pre">fields=[('id',</span> <span class="pre">&lt;django.db.models.fields.BigAutoField&gt;),</span> <span class="pre">('First_Name',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('Last_Name',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('User_Name',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('Phone_Number',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('NID',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('Package',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('Pay_With',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('Card_Num',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('Card_Status',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;)]&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0004_premium_ticket.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations.0005_auto_20211226_1217">
+<span id="metro-app-migrations-0005-auto-20211226-1217-module"></span><h2>metro_app.migrations.0005_auto_20211226_1217 module<a class="headerlink" href="#module-metro_app.migrations.0005_auto_20211226_1217" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0005_auto_20211226_1217.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0005_auto_20211226_1217.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0005_auto_20211226_1217.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0005_auto_20211226_1217.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('metro_app',</span> <span class="pre">'0004_premium_ticket')]</span></em><a class="headerlink" href="#metro_app.migrations.0005_auto_20211226_1217.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0005_auto_20211226_1217.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;RenameField</span>&#160; <span class="pre">model_name='premium_ticket',</span> <span class="pre">old_name='Card_Num',</span> <span class="pre">new_name='card_num'&gt;,</span> <span class="pre">&lt;RenameField</span>&#160; <span class="pre">model_name='premium_ticket',</span> <span class="pre">old_name='Card_Status',</span> <span class="pre">new_name='card_status'&gt;,</span> <span class="pre">&lt;RenameField</span>&#160; <span class="pre">model_name='premium_ticket',</span> <span class="pre">old_name='First_Name',</span> <span class="pre">new_name='first_name'&gt;,</span> <span class="pre">&lt;RenameField</span>&#160; <span class="pre">model_name='premium_ticket',</span> <span class="pre">old_name='Last_Name',</span> <span class="pre">new_name='last_name'&gt;,</span> <span class="pre">&lt;RenameField</span>&#160; <span class="pre">model_name='premium_ticket',</span> <span class="pre">old_name='NID',</span> <span class="pre">new_name='nid'&gt;,</span> <span class="pre">&lt;RenameField</span>&#160; <span class="pre">model_name='premium_ticket',</span> <span class="pre">old_name='Package',</span> <span class="pre">new_name='package'&gt;,</span> <span class="pre">&lt;RenameField</span>&#160; <span class="pre">model_name='premium_ticket',</span> <span class="pre">old_name='Pay_With',</span> <span class="pre">new_name='pay_with'&gt;,</span> <span class="pre">&lt;RenameField</span>&#160; <span class="pre">model_name='premium_ticket',</span> <span class="pre">old_name='Phone_Number',</span> <span class="pre">new_name='phone_number'&gt;,</span> <span class="pre">&lt;RenameField</span>&#160; <span class="pre">model_name='premium_ticket',</span> <span class="pre">old_name='User_Name',</span> <span class="pre">new_name='user_name'&gt;,</span> <span class="pre">&lt;AddField</span>&#160; <span class="pre">model_name='premium_ticket',</span> <span class="pre">name='start_Date',</span> <span class="pre">field=&lt;django.db.models.fields.DateTimeField&gt;&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0005_auto_20211226_1217.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations.0006_rename_start_date_premium_ticket_start_date">
+<span id="metro-app-migrations-0006-rename-start-date-premium-ticket-start-date-module"></span><h2>metro_app.migrations.0006_rename_start_date_premium_ticket_start_date module<a class="headerlink" href="#module-metro_app.migrations.0006_rename_start_date_premium_ticket_start_date" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0006_rename_start_date_premium_ticket_start_date.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0006_rename_start_date_premium_ticket_start_date.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0006_rename_start_date_premium_ticket_start_date.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0006_rename_start_date_premium_ticket_start_date.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('metro_app',</span> <span class="pre">'0005_auto_20211226_1217')]</span></em><a class="headerlink" href="#metro_app.migrations.0006_rename_start_date_premium_ticket_start_date.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0006_rename_start_date_premium_ticket_start_date.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;RenameField</span>&#160; <span class="pre">model_name='premium_ticket',</span> <span class="pre">old_name='start_Date',</span> <span class="pre">new_name='start_date'&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0006_rename_start_date_premium_ticket_start_date.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations.0007_alter_premium_ticket_start_date">
+<span id="metro-app-migrations-0007-alter-premium-ticket-start-date-module"></span><h2>metro_app.migrations.0007_alter_premium_ticket_start_date module<a class="headerlink" href="#module-metro_app.migrations.0007_alter_premium_ticket_start_date" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0007_alter_premium_ticket_start_date.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0007_alter_premium_ticket_start_date.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0007_alter_premium_ticket_start_date.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0007_alter_premium_ticket_start_date.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('metro_app',</span> <span class="pre">'0006_rename_start_date_premium_ticket_start_date')]</span></em><a class="headerlink" href="#metro_app.migrations.0007_alter_premium_ticket_start_date.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0007_alter_premium_ticket_start_date.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='premium_ticket',</span> <span class="pre">name='start_date',</span> <span class="pre">field=&lt;django.db.models.fields.DateField&gt;&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0007_alter_premium_ticket_start_date.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations.0008_auto_20211226_2108">
+<span id="metro-app-migrations-0008-auto-20211226-2108-module"></span><h2>metro_app.migrations.0008_auto_20211226_2108 module<a class="headerlink" href="#module-metro_app.migrations.0008_auto_20211226_2108" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0008_auto_20211226_2108.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0008_auto_20211226_2108.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0008_auto_20211226_2108.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0008_auto_20211226_2108.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('metro_app',</span> <span class="pre">'0007_alter_premium_ticket_start_date')]</span></em><a class="headerlink" href="#metro_app.migrations.0008_auto_20211226_2108.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0008_auto_20211226_2108.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;RenameField</span>&#160; <span class="pre">model_name='user_ticket',</span> <span class="pre">old_name='name',</span> <span class="pre">new_name='destination'&gt;,</span> <span class="pre">&lt;RenameField</span>&#160; <span class="pre">model_name='user_ticket',</span> <span class="pre">old_name='phone_number',</span> <span class="pre">new_name='source'&gt;,</span> <span class="pre">&lt;RemoveField</span>&#160; <span class="pre">model_name='user_ticket',</span> <span class="pre">name='route_id'&gt;,</span> <span class="pre">&lt;AddField</span>&#160; <span class="pre">model_name='user_ticket',</span> <span class="pre">name='no_of_tickets',</span> <span class="pre">field=&lt;django.db.models.fields.IntegerField&gt;&gt;,</span> <span class="pre">&lt;AddField</span>&#160; <span class="pre">model_name='user_ticket',</span> <span class="pre">name='total',</span> <span class="pre">field=&lt;django.db.models.fields.IntegerField&gt;&gt;,</span> <span class="pre">&lt;AlterField</span>&#160; <span class="pre">model_name='user_ticket',</span> <span class="pre">name='date',</span> <span class="pre">field=&lt;django.db.models.fields.DateField&gt;&gt;,</span> <span class="pre">&lt;AlterField</span>&#160; <span class="pre">model_name='user_ticket',</span> <span class="pre">name='email_address',</span> <span class="pre">field=&lt;django.db.models.fields.EmailField&gt;&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0008_auto_20211226_2108.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations.0009_auto_20211226_2123">
+<span id="metro-app-migrations-0009-auto-20211226-2123-module"></span><h2>metro_app.migrations.0009_auto_20211226_2123 module<a class="headerlink" href="#module-metro_app.migrations.0009_auto_20211226_2123" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0009_auto_20211226_2123.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0009_auto_20211226_2123.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0009_auto_20211226_2123.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0009_auto_20211226_2123.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('metro_app',</span> <span class="pre">'0008_auto_20211226_2108')]</span></em><a class="headerlink" href="#metro_app.migrations.0009_auto_20211226_2123.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0009_auto_20211226_2123.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='user_ticket',</span> <span class="pre">name='email_address',</span> <span class="pre">field=&lt;django.db.models.fields.EmailField&gt;&gt;,</span> <span class="pre">&lt;AlterField</span>&#160; <span class="pre">model_name='user_ticket',</span> <span class="pre">name='train_no',</span> <span class="pre">field=&lt;django.db.models.fields.IntegerField&gt;&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0009_auto_20211226_2123.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations.0010_auto_20211226_2133">
+<span id="metro-app-migrations-0010-auto-20211226-2133-module"></span><h2>metro_app.migrations.0010_auto_20211226_2133 module<a class="headerlink" href="#module-metro_app.migrations.0010_auto_20211226_2133" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0010_auto_20211226_2133.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0010_auto_20211226_2133.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0010_auto_20211226_2133.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0010_auto_20211226_2133.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('metro_app',</span> <span class="pre">'0009_auto_20211226_2123')]</span></em><a class="headerlink" href="#metro_app.migrations.0010_auto_20211226_2133.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0010_auto_20211226_2133.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='user_ticket',</span> <span class="pre">name='email_address',</span> <span class="pre">field=&lt;django.db.models.fields.EmailField&gt;&gt;,</span> <span class="pre">&lt;AlterField</span>&#160; <span class="pre">model_name='user_ticket',</span> <span class="pre">name='train_no',</span> <span class="pre">field=&lt;django.db.models.fields.IntegerField&gt;&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0010_auto_20211226_2133.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations.0011_rename_email_address_user_ticket_email">
+<span id="metro-app-migrations-0011-rename-email-address-user-ticket-email-module"></span><h2>metro_app.migrations.0011_rename_email_address_user_ticket_email module<a class="headerlink" href="#module-metro_app.migrations.0011_rename_email_address_user_ticket_email" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0011_rename_email_address_user_ticket_email.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0011_rename_email_address_user_ticket_email.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0011_rename_email_address_user_ticket_email.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0011_rename_email_address_user_ticket_email.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('metro_app',</span> <span class="pre">'0010_auto_20211226_2133')]</span></em><a class="headerlink" href="#metro_app.migrations.0011_rename_email_address_user_ticket_email.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0011_rename_email_address_user_ticket_email.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;RenameField</span>&#160; <span class="pre">model_name='user_ticket',</span> <span class="pre">old_name='email_address',</span> <span class="pre">new_name='email'&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0011_rename_email_address_user_ticket_email.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations.0012_auto_20211227_1157">
+<span id="metro-app-migrations-0012-auto-20211227-1157-module"></span><h2>metro_app.migrations.0012_auto_20211227_1157 module<a class="headerlink" href="#module-metro_app.migrations.0012_auto_20211227_1157" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0012_auto_20211227_1157.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0012_auto_20211227_1157.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0012_auto_20211227_1157.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0012_auto_20211227_1157.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('metro_app',</span> <span class="pre">'0011_rename_email_address_user_ticket_email')]</span></em><a class="headerlink" href="#metro_app.migrations.0012_auto_20211227_1157.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0012_auto_20211227_1157.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;CreateModel</span>&#160; <span class="pre">name='employee_ticket',</span> <span class="pre">fields=[('id',</span> <span class="pre">&lt;django.db.models.fields.BigAutoField&gt;),</span> <span class="pre">('train_no',</span> <span class="pre">&lt;django.db.models.fields.IntegerField&gt;),</span> <span class="pre">('source',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('destination',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('date',</span> <span class="pre">&lt;django.db.models.fields.DateField&gt;),</span> <span class="pre">('no_of_tickets',</span> <span class="pre">&lt;django.db.models.fields.IntegerField&gt;),</span> <span class="pre">('total',</span> <span class="pre">&lt;django.db.models.fields.IntegerField&gt;)]&gt;,</span> <span class="pre">&lt;RenameField</span>&#160; <span class="pre">model_name='user_ticket',</span> <span class="pre">old_name='train_no',</span> <span class="pre">new_name='ticket_no'&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0012_auto_20211227_1157.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations.0013_rename_train_no_employee_ticket_ticket_no">
+<span id="metro-app-migrations-0013-rename-train-no-employee-ticket-ticket-no-module"></span><h2>metro_app.migrations.0013_rename_train_no_employee_ticket_ticket_no module<a class="headerlink" href="#module-metro_app.migrations.0013_rename_train_no_employee_ticket_ticket_no" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0013_rename_train_no_employee_ticket_ticket_no.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0013_rename_train_no_employee_ticket_ticket_no.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0013_rename_train_no_employee_ticket_ticket_no.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0013_rename_train_no_employee_ticket_ticket_no.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('metro_app',</span> <span class="pre">'0012_auto_20211227_1157')]</span></em><a class="headerlink" href="#metro_app.migrations.0013_rename_train_no_employee_ticket_ticket_no.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0013_rename_train_no_employee_ticket_ticket_no.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;RenameField</span>&#160; <span class="pre">model_name='employee_ticket',</span> <span class="pre">old_name='train_no',</span> <span class="pre">new_name='ticket_no'&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0013_rename_train_no_employee_ticket_ticket_no.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations.0014_employee">
+<span id="metro-app-migrations-0014-employee-module"></span><h2>metro_app.migrations.0014_employee module<a class="headerlink" href="#module-metro_app.migrations.0014_employee" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.migrations.0014_employee.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.migrations.0014_employee.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.migrations.0014_employee.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0014_employee.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('metro_app',</span> <span class="pre">'0013_rename_train_no_employee_ticket_ticket_no')]</span></em><a class="headerlink" href="#metro_app.migrations.0014_employee.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.migrations.0014_employee.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;CreateModel</span>&#160; <span class="pre">name='Employee',</span> <span class="pre">fields=[('id',</span> <span class="pre">&lt;django.db.models.fields.BigAutoField&gt;),</span> <span class="pre">('First_Name',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('Last_Name',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('User_Name',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('Phone_Number',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('NID',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('Address',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;)]&gt;]</span></em><a class="headerlink" href="#metro_app.migrations.0014_employee.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.migrations">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-metro_app.migrations" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">metro_rail</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, raisa.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/metro_app.migrations.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
