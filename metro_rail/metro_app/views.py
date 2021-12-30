@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required 
 
-from .models import Premium_Member, Employee
+from .models import Premium_Member, Employee, TicketSell
 from django.contrib.auth.models import User
 from .forms import PM_RegForm
 from .forms import EM_RegForm
@@ -162,3 +162,23 @@ def PremiumPage(request):
     context = {'info': info, 'Edate': Edate}
 
     return render (request, 'metro_app/premium member page.html', context)
+
+
+def TicketValid(request):
+    # if request.method=='POST':
+        search = request.POST.get('search')
+        ticket = TicketSell.objects.all() 
+        
+         
+        if search != '' and search is not None:
+            ticket = TicketSell.objects.filter(ticketNo=search)
+            if ticket:
+                messages.info(request, 'This ticket has been sold')
+                context = {'ticket': ticket,}
+                return render(request, 'metro_app/TicketValid.html', context)
+            else:
+                messages.info(request, 'This ticket has not been sold')               
+                return render(request, 'metro_app/TicketValid.html')
+        else:
+            
+            return render(request, 'metro_app/TicketValid.html')

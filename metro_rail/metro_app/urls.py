@@ -8,6 +8,7 @@ urlpatterns = [
     path('pregister/', views.pregister,name="pregister"),
     path('PremiumPage/', views.PremiumPage,name="PremiumPage"),
     path('empregister/',views.empregister, name="empregister"),
+    path('TicketValid/',views.TicketValid, name="TicketValid")
 
     
 
