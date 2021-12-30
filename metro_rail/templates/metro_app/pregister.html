@@ -42,6 +42,15 @@
             {% csrf_token %}
             {{form.non_field_errors}}
 
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-dismissible alert-success">
+                
+                <strong>{{message}}<strong>
+                </div>
+                {% endfor %}
+            {% endif %}
+
             <div class="user-info">
                 <div class="input-box">
                     <span class="details">First Name</span>
@@ -65,7 +74,7 @@
                 </div>
                 <div class="input-box">
                     <span class="details">Phone Number</span>
-                    <input type="tel" name="Phone Number" placeholder="Enter contact number " required>
+                    <input type="tel" name="Phone Number" placeholder="Enter contact number " pattern="[0-9]{11}" title="phone number should be 11 digits" required>
                 </div>
                 <div class="input-box">
                     <span class="details">User Name</span>
@@ -104,7 +113,7 @@
                 </div>
                 <div class="input-box">
                     <span class="details">NID</span>
-                    <input type="text" name="NID" placeholder="Enter NID number " required>
+                    <input type="text" name="NID" placeholder="Enter NID number " title="NID shoud be 10 digits" pattern="[0-9]{10}" required>
                 </div>
             </div>
             <div class="package-selection">
