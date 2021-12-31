@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 from django.urls import reverse,resolve
-from metro_app.views import loginPage,logoutUser
+from metro_app.views import loginPage,logoutUser,schedule_checks
 
 class TestUrls(SimpleTestCase):
 
