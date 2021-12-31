@@ -36,10 +36,9 @@
     <div class="content">
     <p> 
     <h2>Ticket Form</h2>
-    <form>
-        <lebel for="source"> Source: </lebel>
-        <input type="text" name="source" id="source">
-        <br>
+
+    <form method= "Post">
+        {% csrf_token %}
 
         <lebel for="destinationform"> Destination From: </lebel>
         <input type="text" name="source" id="source">
@@ -47,6 +46,14 @@
 
         <lebel for="destinationto"> Destination To: </lebel>
         <input type="text" name="source" id="source">
+        <br>
+
+        <lebel for="name"> Name: </lebel>
+        <input type="text" name="source" id="source">
+        <br>
+         
+        <label for="email"> Email: </label>
+        <input type="email" id="email" name="email">
         <br>
 
         <lebel for="traveldate"> Travel Date: </lebel>
