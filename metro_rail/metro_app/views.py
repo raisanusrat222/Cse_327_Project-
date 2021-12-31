@@ -113,7 +113,7 @@ def schedule_checks(request):
     return render(request,'metro_app/schedule_check.html',context=diction)
 
 @login_required
-def adminPage (request):
+def admin_pages (request):
     """
 
     This method is used to view the admin page.
