@@ -15,7 +15,7 @@ class TestViews(TestCase):
             "password":""
         })
         return response
-    def test_schedule_GET(self):
+    def test_schedule_checks_GET(self):
         client=Client()
         response=client.get(reverse('scheck'))
         self.assertEquals(response.status_code,200)
