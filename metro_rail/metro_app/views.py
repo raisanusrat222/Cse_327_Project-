@@ -104,11 +104,11 @@ def empregister(request):
             form = RegForm(request.POST) 
             obj = Employee()
 
-            first_name = request.POST['First Name']
-            last_name = request.POST['Last Name']
-            phone = request.POST['Phone Number']
-            nid = request.POST['NID']
-            address = request.POST['Address']           
+            first_name = request.POST.get('First_Name')
+            last_name = request.POST.get('Last_Name')
+            phone = request.POST.get('Phone_Number')
+            nid = request.POST.get('NID')
+            address = request.POST.get('Address')           
             obj.First_Name = first_name
             obj.Last_Name =  last_name
             for instance in Employee.objects.all():
