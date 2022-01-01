@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import sellticket
+from .models import SellTicket
 # Register your models here.
-admin.site.register(sellticket)
+admin.site.register(SellTicket)
