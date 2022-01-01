@@ -3,7 +3,6 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
-<<<<<<< HEAD
 from metro_app.models import schedule_check
 from metro_app.models import user_ticket
 from metro_app.models import employee_ticket
@@ -211,7 +210,6 @@ def premium_tickets(request):
 
     
     
-=======
 
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required 
@@ -244,7 +242,6 @@ def pregister(request):
         return redirect('login')
     else:   
         form = RegForm()
->>>>>>> Md.-Arshaduzzaman-Fahim
 
         if request.method == 'POST':
             form = RegForm(request.POST) 

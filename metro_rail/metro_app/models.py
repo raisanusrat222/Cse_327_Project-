@@ -1,7 +1,6 @@
 from django.db import models
 from datetime import datetime, date
 
-<<<<<<< HEAD
 
 class schedule_check (models.Model):
     """
@@ -43,8 +42,6 @@ class premium_ticket(models.Model):
     
     this class is used to create objects for database entry has fields called first_name,last_name,user_name,phone_number,nid,package,start_date,pay_with,card_num,card_status
     """
-=======
->>>>>>> Md.-Arshaduzzaman-Fahim
 
     first_name = models.CharField(max_length=30,default='',null=False)       
     last_name = models.CharField(max_length=30,default='',null=False)
@@ -73,20 +70,6 @@ class employee_ticket(models.Model):
     no_of_tickets=models.IntegerField(default=0)
     total=models.IntegerField(default=0)
 
-class Employee(models.Model):
-    """
-    This class is used to store  information of employee
-    This class is extended from the Model class so it has all the functionality
-    of the model class.
-    
-    this class is used to create objects for database entry has fields called First_Name,Last_Name,User_Name,Phone_Number,NID,Address
-    """
-    First_Name = models.CharField(max_length=30,default='',null=False)       
-    Last_Name = models.CharField(max_length=30,default='',null=False)
-    User_Name = models.CharField(max_length=30,default='',null=False)
-    Phone_Number = models.CharField(max_length=30,default='',null=False)
-    NID = models.CharField(max_length=30,default='',null=False)
-    Address = models.CharField(max_length=30,default='',null=False)
 
 
      
