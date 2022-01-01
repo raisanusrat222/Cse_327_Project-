@@ -6,4 +6,4 @@ class TestUrls(SimpleTestCase):
 
     def test_pregister_url_resolves(self):
         url = reverse('pregister')      
-        self.assertEquals(resolve(url).func, pregister) 
+        self.assertEquals(resolve(url).func, pregister)
