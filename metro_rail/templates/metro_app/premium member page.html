@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Member Page</title>
+    <link rel="stylesheet" href="{% static 'premium_member_page.css' %}">
+    <!-- <link rel="stylesheet" href="/static/premium member page.css"> -->
+
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="Container">
+          <div class="nav">
+              <div class="logo">
+                  Dhaka <br> Metro Rail
+              </div>
+              <div class="menu">
+                  <ul class="navMenu">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Ticket</a></li>
+                      <li><a href="#">Schedule</a></li>
+                      <li><a href="#">Fare</a></li>
+                        <li><a href="#">About US</a></li>
+                      
+                      <li><a href="{% url 'logout' %}">Logout</a></li>
+
+
+                  </ul>
+
+              </div>
+          </div>
+
+      </div>
+
+  </div>
+    <div class="containter">
+      <div class="dashboard">
+        <div class="un">
+          <h5> Welcome-{{user.username}} </h5>
+        </div>
+        <h4>Dashboard</h4> <br>
+        <a id="pack">Packages</a>
+        <a id="afc">Apply For Card</a>
+        <a id="rcp">Renew Current Package</a>
+       
+      </div>
+
+            <div id="table-cont">
+              <table id="table">
+                <tr>
+                  <th>Current Packages</th>
+                  <th>End date</th>
+                  <th>Card Status</th>
+
+                </tr>
+                <tr>
+                  <td>{{info.Package}}</td>
+                  <td>{{Edate}}</td>
+                  <td> {{info.Card_Status}} </td>
+
+                </tr>
+               
+
+
+              </table>
+            </div>
+
+        <br>
+
+
+        <div id="rn-ac" class="rn-ac">
+          <div class="rnn">
+            
+           
+            
+          </div>
+          
+          <form action="" method="post">
+            {% csrf_token %}
+            <div class="sub">
+              <div class="c1">
+                <input type="checkbox" id="ac" name="card" value="applied for card">
+              </div>
+              <div class="c2">
+                <label for="">Apply for card</label>
+              </div>
+              <div class="c3">
+                <input type="submit">
+              </div>
+            </div>
+            {% for message in messages %}
+              <p id="messages">{{message}}</p>
+            {% endfor %}
+         </form>
+        </div>
+
+
+        <form action="" method="post">
+          {% csrf_token %}
+          <div id="bigp" class="bigp">
+            <div class="package-selection">
+              <div class="ch">
+                <input type="checkbox" id="rp" name="rpac" value="renew_package">
+                <label for="p">Renew Current Package</label>
+              </div>
+              <div class="pps">
+                <div class="l">
+                  <label for="">Select New Package :</label>
+                </div> 
+                <div class="package-selection2">
+                  
+                  <div id="package-slider">
+                        <div class="r1">
+                          <input type="radio" name="package-amount" id="1" value="Monthly-1000 BDT" >
+                        </div>
+                        <div class="r2">
+                          <input type="radio" name="package-amount" id="2" value="Half Yearly-4500 BDT" >
+                        </div> 
+                        <div class="r3">
+                          <input type="radio" name="package-amount" id="3" value="Yearly-8000 BDT" >
+                        </div>
+                  </div>
+                  <div class="package-name">
+                       <div class="p1">
+                          <label for="1" amount=" 1000 BDT">Monthly &nbsp; 1000 BDT</br></label>
+                      </div>
+                      <div class="p2">  
+                          <label for="2" amount="4500 BDT">Half-Yearly &nbsp; 4500 BDT</br></label>
+                      </div>
+                      <div class="p3">
+                          <label for="3" amount="8000 BDT">Yearly &nbsp; 8000 BDT </br></label>
+                      </div>
+                  </div>
+               </div>
+
+              </div>
+
+
+            </div>
+            <br>
+            <div class="confirm">
+              <input type="submit" value="Confirm">
+            </div>
+
+          </div>
+       </form>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- -------- Required JS for Event-------- -->
+
+    <script>
+      $(document).ready(function () {
+
+        $("#table-cont").hide();
+        $("#rn-ac").hide();
+        $("#bigp").hide();
+
+        $("#pack").click(function () {
+          $("#table-cont").slideDown();
+          $("#rn-ac").hide();
+          $("#bigp").hide();
+          $("#pack").active();
+        })
+        $("#afc").click(function () {
+          $("#rn-ac").slideDown();
+          $("#table-cont").hide();
+          $("#bigp").hide();
+        })
+        $("#rcp").click(function () {
+          $("#bigp").slideDown();
+          $("#table-cont").hide();
+          $("#rn-ac").hide();
+        })
+      })
+    </script>
+
+</body>
+</html>
+

@@ -28,6 +28,17 @@ metro\_app.apps module
    :undoc-members:
    :show-inheritance:
 
+<<<<<<< HEAD
+=======
+metro\_app.forms module
+-----------------------
+
+.. automodule:: metro_app.forms
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+>>>>>>> Md.-Arshaduzzaman-Fahim
 metro\_app.models module
 ------------------------
 

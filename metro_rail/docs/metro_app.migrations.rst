@@ -12,14 +12,22 @@ metro\_app.migrations.0001\_initial module
    :undoc-members:
    :show-inheritance:
 
+<<<<<<< HEAD
 metro\_app.migrations.0002\_rename\_schedule\_schedule\_check module
 --------------------------------------------------------------------
 
 .. automodule:: metro_app.migrations.0002_rename_schedule_schedule_check
+=======
+metro\_app.migrations.0002\_delete\_schedule\_check module
+----------------------------------------------------------
+
+.. automodule:: metro_app.migrations.0002_delete_schedule_check
+>>>>>>> Md.-Arshaduzzaman-Fahim
    :members:
    :undoc-members:
    :show-inheritance:
 
+<<<<<<< HEAD
 metro\_app.migrations.0003\_user\_ticket module
 -----------------------------------------------
 
@@ -104,14 +112,27 @@ metro\_app.migrations.0013\_rename\_train\_no\_employee\_ticket\_ticket\_no modu
 ----------------------------------------------------------------------------------
 
 .. automodule:: metro_app.migrations.0013_rename_train_no_employee_ticket_ticket_no
+=======
+metro\_app.migrations.0003\_employee module
+-------------------------------------------
+
+.. automodule:: metro_app.migrations.0003_employee
+>>>>>>> Md.-Arshaduzzaman-Fahim
    :members:
    :undoc-members:
    :show-inheritance:
 
+<<<<<<< HEAD
 metro\_app.migrations.0014\_employee module
 -------------------------------------------
 
 .. automodule:: metro_app.migrations.0014_employee
+=======
+metro\_app.migrations.0004\_rename\_premium\_member\_premiummember module
+-------------------------------------------------------------------------
+
+.. automodule:: metro_app.migrations.0004_rename_premium_member_premiummember
+>>>>>>> Md.-Arshaduzzaman-Fahim
    :members:
    :undoc-members:
    :show-inheritance:

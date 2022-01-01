@@ -40,6 +40,7 @@
 <li class="toctree-l1"><a class="reference internal" href="metro_app.migrations.html">metro_app.migrations package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="metro_app.migrations.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metro_app.migrations.html#module-metro_app.migrations.0001_initial">metro_app.migrations.0001_initial module</a></li>
+<<<<<<< HEAD
 <li class="toctree-l2"><a class="reference internal" href="metro_app.migrations.html#module-metro_app.migrations.0002_rename_schedule_schedule_check">metro_app.migrations.0002_rename_schedule_schedule_check module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metro_app.migrations.html#module-metro_app.migrations.0003_user_ticket">metro_app.migrations.0003_user_ticket module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metro_app.migrations.html#module-metro_app.migrations.0004_premium_ticket">metro_app.migrations.0004_premium_ticket module</a></li>
@@ -53,6 +54,11 @@
 <li class="toctree-l2"><a class="reference internal" href="metro_app.migrations.html#module-metro_app.migrations.0012_auto_20211227_1157">metro_app.migrations.0012_auto_20211227_1157 module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metro_app.migrations.html#module-metro_app.migrations.0013_rename_train_no_employee_ticket_ticket_no">metro_app.migrations.0013_rename_train_no_employee_ticket_ticket_no module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metro_app.migrations.html#module-metro_app.migrations.0014_employee">metro_app.migrations.0014_employee module</a></li>
+=======
+<li class="toctree-l2"><a class="reference internal" href="metro_app.migrations.html#module-metro_app.migrations.0002_delete_schedule_check">metro_app.migrations.0002_delete_schedule_check module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metro_app.migrations.html#module-metro_app.migrations.0003_employee">metro_app.migrations.0003_employee module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metro_app.migrations.html#module-metro_app.migrations.0004_rename_premium_member_premiummember">metro_app.migrations.0004_rename_premium_member_premiummember module</a></li>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <li class="toctree-l2"><a class="reference internal" href="metro_app.migrations.html#module-metro_app.migrations">Module contents</a></li>
 </ul>
 </li>
@@ -84,16 +90,80 @@
 </dd></dl>
 
 </section>
+<<<<<<< HEAD
+=======
+<section id="module-metro_app.forms">
+<span id="metro-app-forms-module"></span><h2>metro_app.forms module<a class="headerlink" href="#module-metro_app.forms" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.forms.RegForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.forms.</span></span><span class="sig-name descname"><span class="pre">RegForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.forms.RegForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.auth.forms.UserCreationForm</span></code></p>
+<p>This class is used to create the premium member and employee registration page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> – it’s a form request from user.</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="metro_app.forms.RegForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#metro_app.forms.RegForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.forms.RegForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['username',</span> <span class="pre">'email',</span> <span class="pre">'password1',</span> <span class="pre">'password2']</span></em><a class="headerlink" href="#metro_app.forms.RegForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.forms.RegForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#metro_app.forms.RegForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.auth.models.User</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.forms.RegForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'password1':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'password2':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#metro_app.forms.RegForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metro_app.forms.RegForm.clean_username">
+<span class="sig-name descname"><span class="pre">clean_username</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.forms.RegForm.clean_username" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.forms.RegForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'password1':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'password2':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#metro_app.forms.RegForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="metro_app.forms.RegForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#metro_app.forms.RegForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <section id="module-metro_app.models">
 <span id="metro-app-models-module"></span><h2>metro_app.models module<a class="headerlink" href="#module-metro_app.models" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="metro_app.models.Employee">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.models.</span></span><span class="sig-name descname"><span class="pre">Employee</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.models.Employee" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<<<<<<< HEAD
 <p>This class is used to store  information of employee
 This class is extended from the Model class so it has all the functionality
 of the model class.</p>
 <p>this class is used to create objects for database entry has fields called First_Name,Last_Name,User_Name,Phone_Number,NID,Address</p>
+=======
+<p>This class is used to create the employee Objects. It has information regarding employee 
+name, username, password, email, phone number, nid, address.</p>
+<p>This class is extended from the Model class ,so it has all the functionality
+of the model class.</p>
+<p>This class is used to create objects for database entry</p>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <dl class="py attribute">
 <dt class="sig sig-object py" id="metro_app.models.Employee.Address">
 <span class="sig-name descname"><span class="pre">Address</span></span><a class="headerlink" href="#metro_app.models.Employee.Address" title="Permalink to this definition">¶</a></dt>
@@ -163,6 +233,7 @@ object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py class">
+<<<<<<< HEAD
 <dt class="sig sig-object py" id="metro_app.models.employee_ticket">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.models.</span></span><span class="sig-name descname"><span class="pre">employee_ticket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.models.employee_ticket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
@@ -235,17 +306,36 @@ object the first time, the query is executed.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="metro_app.models.employee_ticket.ticket_no">
 <span class="sig-name descname"><span class="pre">ticket_no</span></span><a class="headerlink" href="#metro_app.models.employee_ticket.ticket_no" title="Permalink to this definition">¶</a></dt>
+=======
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">metro_app.models.</span></span><span class="sig-name descname"><span class="pre">PremiumMember</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.models.PremiumMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>This class is used to create the premium member Objects. It has information regarding premium member 
+name, username, password, email, phone number, nid, package and payment info.</p>
+<p>This class is extended from the Model class ,so it has all the functionality
+of the model class.</p>
+<p>This class is used to create objects for database entry</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.Card_Num">
+<span class="sig-name descname"><span class="pre">Card_Num</span></span><a class="headerlink" href="#metro_app.models.PremiumMember.Card_Num" title="Permalink to this definition">¶</a></dt>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<<<<<<< HEAD
 <dt class="sig sig-object py" id="metro_app.models.employee_ticket.total">
 <span class="sig-name descname"><span class="pre">total</span></span><a class="headerlink" href="#metro_app.models.employee_ticket.total" title="Permalink to this definition">¶</a></dt>
+=======
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.Card_Status">
+<span class="sig-name descname"><span class="pre">Card_Status</span></span><a class="headerlink" href="#metro_app.models.PremiumMember.Card_Status" title="Permalink to this definition">¶</a></dt>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
+<<<<<<< HEAD
 </dd></dl>
 
 <dl class="py class">
@@ -335,17 +425,34 @@ object the first time, the query is executed.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="metro_app.models.premium_ticket.pay_with">
 <span class="sig-name descname"><span class="pre">pay_with</span></span><a class="headerlink" href="#metro_app.models.premium_ticket.pay_with" title="Permalink to this definition">¶</a></dt>
+=======
+<dl class="py exception">
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#metro_app.models.PremiumMember.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.First_Name">
+<span class="sig-name descname"><span class="pre">First_Name</span></span><a class="headerlink" href="#metro_app.models.PremiumMember.First_Name" title="Permalink to this definition">¶</a></dt>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<<<<<<< HEAD
 <dt class="sig sig-object py" id="metro_app.models.premium_ticket.phone_number">
 <span class="sig-name descname"><span class="pre">phone_number</span></span><a class="headerlink" href="#metro_app.models.premium_ticket.phone_number" title="Permalink to this definition">¶</a></dt>
+=======
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.Last_Name">
+<span class="sig-name descname"><span class="pre">Last_Name</span></span><a class="headerlink" href="#metro_app.models.PremiumMember.Last_Name" title="Permalink to this definition">¶</a></dt>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
+<<<<<<< HEAD
 <dl class="py attribute">
 <dt class="sig sig-object py" id="metro_app.models.premium_ticket.start_date">
 <span class="sig-name descname"><span class="pre">start_date</span></span><a class="headerlink" href="#metro_app.models.premium_ticket.start_date" title="Permalink to this definition">¶</a></dt>
@@ -379,10 +486,16 @@ of the model class.</p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="metro_app.models.schedule_check.MultipleObjectsReturned">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#metro_app.models.schedule_check.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+=======
+<dl class="py exception">
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#metro_app.models.PremiumMember.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
+<<<<<<< HEAD
 <dt class="sig sig-object py" id="metro_app.models.schedule_check.arrival_time">
 <span class="sig-name descname"><span class="pre">arrival_time</span></span><a class="headerlink" href="#metro_app.models.schedule_check.arrival_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
@@ -406,11 +519,16 @@ object the first time, the query is executed.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="metro_app.models.schedule_check.id">
 <span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#metro_app.models.schedule_check.id" title="Permalink to this definition">¶</a></dt>
+=======
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.NID">
+<span class="sig-name descname"><span class="pre">NID</span></span><a class="headerlink" href="#metro_app.models.PremiumMember.NID" title="Permalink to this definition">¶</a></dt>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<<<<<<< HEAD
 <dt class="sig sig-object py" id="metro_app.models.schedule_check.objects">
 <span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#metro_app.models.schedule_check.objects" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -418,17 +536,27 @@ object the first time, the query is executed.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="metro_app.models.schedule_check.route_id">
 <span class="sig-name descname"><span class="pre">route_id</span></span><a class="headerlink" href="#metro_app.models.schedule_check.route_id" title="Permalink to this definition">¶</a></dt>
+=======
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.Package">
+<span class="sig-name descname"><span class="pre">Package</span></span><a class="headerlink" href="#metro_app.models.PremiumMember.Package" title="Permalink to this definition">¶</a></dt>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<<<<<<< HEAD
 <dt class="sig sig-object py" id="metro_app.models.schedule_check.source">
 <span class="sig-name descname"><span class="pre">source</span></span><a class="headerlink" href="#metro_app.models.schedule_check.source" title="Permalink to this definition">¶</a></dt>
+=======
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.Pay_With">
+<span class="sig-name descname"><span class="pre">Pay_With</span></span><a class="headerlink" href="#metro_app.models.PremiumMember.Pay_With" title="Permalink to this definition">¶</a></dt>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
+<<<<<<< HEAD
 </dd></dl>
 
 <dl class="py class">
@@ -454,25 +582,41 @@ of the model class.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="metro_app.models.user_ticket.date">
 <span class="sig-name descname"><span class="pre">date</span></span><a class="headerlink" href="#metro_app.models.user_ticket.date" title="Permalink to this definition">¶</a></dt>
+=======
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.Phone_Number">
+<span class="sig-name descname"><span class="pre">Phone_Number</span></span><a class="headerlink" href="#metro_app.models.PremiumMember.Phone_Number" title="Permalink to this definition">¶</a></dt>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<<<<<<< HEAD
 <dt class="sig sig-object py" id="metro_app.models.user_ticket.destination">
 <span class="sig-name descname"><span class="pre">destination</span></span><a class="headerlink" href="#metro_app.models.user_ticket.destination" title="Permalink to this definition">¶</a></dt>
+=======
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.Start_Date">
+<span class="sig-name descname"><span class="pre">Start_Date</span></span><a class="headerlink" href="#metro_app.models.PremiumMember.Start_Date" title="Permalink to this definition">¶</a></dt>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<<<<<<< HEAD
 <dt class="sig sig-object py" id="metro_app.models.user_ticket.email">
 <span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#metro_app.models.user_ticket.email" title="Permalink to this definition">¶</a></dt>
+=======
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.User_Name">
+<span class="sig-name descname"><span class="pre">User_Name</span></span><a class="headerlink" href="#metro_app.models.PremiumMember.User_Name" title="Permalink to this definition">¶</a></dt>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py method">
+<<<<<<< HEAD
 <dt class="sig sig-object py" id="metro_app.models.user_ticket.get_next_by_date">
 <span class="sig-name descname"><span class="pre">get_next_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.models.user_ticket.get_next_by_date" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -485,11 +629,26 @@ object the first time, the query is executed.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="metro_app.models.user_ticket.id">
 <span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#metro_app.models.user_ticket.id" title="Permalink to this definition">¶</a></dt>
+=======
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.get_next_by_Start_Date">
+<span class="sig-name descname"><span class="pre">get_next_by_Start_Date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">Start_Date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.models.PremiumMember.get_next_by_Start_Date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.get_previous_by_Start_Date">
+<span class="sig-name descname"><span class="pre">get_previous_by_Start_Date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">Start_Date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.models.PremiumMember.get_previous_by_Start_Date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#metro_app.models.PremiumMember.id" title="Permalink to this definition">¶</a></dt>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<<<<<<< HEAD
 <dt class="sig sig-object py" id="metro_app.models.user_ticket.no_of_tickets">
 <span class="sig-name descname"><span class="pre">no_of_tickets</span></span><a class="headerlink" href="#metro_app.models.user_ticket.no_of_tickets" title="Permalink to this definition">¶</a></dt>
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
@@ -527,6 +686,17 @@ object the first time, the query is executed.</p>
 </section>
 <section id="metro-app-tests-module">
 <h2>metro_app.tests module<a class="headerlink" href="#metro-app-tests-module" title="Permalink to this headline">¶</a></h2>
+=======
+<dt class="sig sig-object py" id="metro_app.models.PremiumMember.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#metro_app.models.PremiumMember.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-metro_app.tests">
+<span id="metro-app-tests-module"></span><h2>metro_app.tests module<a class="headerlink" href="#module-metro_app.tests" title="Permalink to this headline">¶</a></h2>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 </section>
 <section id="module-metro_app.urls">
 <span id="metro-app-urls-module"></span><h2>metro_app.urls module<a class="headerlink" href="#module-metro_app.urls" title="Permalink to this headline">¶</a></h2>
@@ -534,6 +704,7 @@ object the first time, the query is executed.</p>
 <section id="module-metro_app.views">
 <span id="metro-app-views-module"></span><h2>metro_app.views module<a class="headerlink" href="#module-metro_app.views" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
+<<<<<<< HEAD
 <dt class="sig sig-object py" id="metro_app.views.adminPage">
 <span class="sig-prename descclassname"><span class="pre">metro_app.views.</span></span><span class="sig-name descname"><span class="pre">adminPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.views.adminPage" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is used to view the admin page.
@@ -616,6 +787,79 @@ object the first time, the query is executed.</p>
 :type request: HttpResponse.
 :return: this method display and return the information of user tickets by serach
 :rtype: HttpResponse.</p>
+=======
+<dt class="sig sig-object py" id="metro_app.views.TicketValid">
+<span class="sig-prename descclassname"><span class="pre">metro_app.views.</span></span><span class="sig-name descname"><span class="pre">TicketValid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.views.TicketValid" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>This method is used to view the ticket validation page for Employee. An employee</dt><dd><p>can check if a ticket has been sold or not by searching with ticket no.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a employee ragistration page which is a HTML page.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metro_app.views.empregister">
+<span class="sig-prename descclassname"><span class="pre">metro_app.views.</span></span><span class="sig-name descname"><span class="pre">empregister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.views.empregister" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to view the register page for Employee. An employee can be
+registered by filling the form with valid data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a employee ragistration page which is a HTML page.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metro_app.views.pregister">
+<span class="sig-prename descclassname"><span class="pre">metro_app.views.</span></span><span class="sig-name descname"><span class="pre">pregister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.views.pregister" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to view the register page for premium member. A user can get
+registered as a premium member by filling the form with valid data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a premium member ragistration page which is a HTML page.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metro_app.views.premiumpage">
+<span class="sig-prename descclassname"><span class="pre">metro_app.views.</span></span><span class="sig-name descname"><span class="pre">premiumpage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metro_app.views.premiumpage" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to view the premium member page. A premium member can check his
+current package also renew package and apply for card by logging in to his account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpResponse.</em>) – it’s a HttpResponse from user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this method returns a employee ragistration page which is a HTML page.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>HttpResponse.</p>
+</dd>
+</dl>
+>>>>>>> Md.-Arshaduzzaman-Fahim
 </dd></dl>
 
 </section>
@@ -672,7 +916,11 @@ object the first time, the query is executed.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
+<<<<<<< HEAD
       &copy;2021, raisa.
+=======
+      &copy;2021, Md. Arshaduzzaman Fahim.
+>>>>>>> Md.-Arshaduzzaman-Fahim
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>

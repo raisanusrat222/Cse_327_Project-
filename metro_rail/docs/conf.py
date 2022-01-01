@@ -13,6 +13,7 @@
 import os
 import sys
 import django
+<<<<<<< HEAD
 
 sys.path.insert(0, os.path.abspath('..'))
 os.environ['DJANGO_SETTINGS_MODULE']='metro_rail.settings'
@@ -24,6 +25,17 @@ django.setup()
 project = 'metro_rail'
 copyright = '2021, raisa'
 author = 'raisa'
+=======
+sys.path.insert(0, os.path.abspath('..'))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'metro_rail.settings'
+django.setup()
+
+# -- Project information -----------------------------------------------------
+
+project = 'metro_rail'
+copyright = '2021, Md. Arshaduzzaman Fahim'
+author = 'Md. Arshaduzzaman Fahim'
+>>>>>>> Md.-Arshaduzzaman-Fahim
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'

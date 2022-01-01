@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Member Page</title>
+    <link rel="stylesheet" href="{% static 'premium_member_page.css' %}">
+    <!-- <link rel="stylesheet" href="/static/premium member page.css"> -->
+
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="Container">
+          <div class="nav">
+              <div class="logo">
+                  Dhaka <br> Metro Rail
+              </div>
+              <div class="menu">
+                  <ul class="navMenu">
+                      <li><a href="{% url 'nav' %}">Home</a></li>
+                      <li><a href="#">Ticket</a></li>
+                      <li><a href="#">Schedule</a></li>
+                      <li><a href="#">Fare</a></li>
+                        <li><a href="#">About US</a></li>
+                      <li> {{user.username}} </li>
+                      <li><a href="{% url 'logout' %}">Logout</a></li>
+
+
+                  </ul>
+
+              </div>
+          </div>
+
+      </div>
+
+  </div>
+    <div class="containter">
+      <div class="dashboard">
+        <form class="example" action="{% url 'TicketValid' %}" method= "post" style="margin:auto;max-width:300px">
+          {% csrf_token %}
+          <input type="number" placeholder="Search Ticket" name="search">
+          
+          <br>
+          
+          <button type="submit"><i class=" fa fa-search"> Check </i></button>
+      </form>
+      <br>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-dismissible alert-success">
+                        
+                        <strong>{{message}}<strong>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+       
+      </div>
+
+            <div id="table-cont">
+              <table id="table">
+                <tr>
+                  <th>Ticket No.</th>
+                  <th>Date      </th>
+                  <th>Fare      </th>
+                  <th>Email     </th>
+              </tr>
+              {% for row in ticket %}
+                <tr>
+                      <td> {{row.ticketNo}} </td>
+                      <td> {{row.date}} </td>
+                      <td> {{row.total}} </td>
+                      <td> {{row.email}} </td>
+                </tr>
+              {% endfor %}
+               
+
+
+              </table>
+            </div>
+
+        <br>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- -------- Required JS for Event-------- -->
+
+    <script>
+      $(document).ready(function () {
+
+        $("#table-cont");
+        
+
+        
+         
+        })
+        
+    </script>
+
+</body>
+</html>

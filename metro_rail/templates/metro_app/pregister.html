@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Member Registration</title>
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+    
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="Conttainer">
+              <div class="nav">
+                  <div class="logo">
+                      Dhaka <br> Metro Rail
+                  </div>
+                  <div class="menu">
+                      <ul class="navMenu">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Ticket</a></li>
+                          <li><a href="#">Schedule</a></li>
+                          <li><a href="#">Fare</a></li>
+                            <li><a href="#">About US</a></li>
+                          <li><a href="#">Login</a></li>
+                          <li><a href="#">Registration</a></li>
+                          
+                          
+                      </ul>
+                     
+                  </div>
+              </div>
+      
+          </div>
+      
+      </div>
+    <div class="container">
+        <div class="tittle">Premium Member Registration</div>
+        <form action="" method="post" >
+            {% csrf_token %}
+            {{form.non_field_errors}}
+
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-dismissible alert-success">
+                
+                <strong>{{message}}<strong>
+                </div>
+                {% endfor %}
+            {% endif %}
+
+            <div class="user-info">
+                <div class="input-box">
+                    <span class="details">First Name</span>
+                    <input type="text" name="First Name" placeholder="Enter first name " required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Last Name</span>
+                    <input type="text" name="Last Name" placeholder="Enter last name " required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    {{form.email}}
+                    {% if form.email.errors %}
+                        <ol>
+                        {% for error in form.email.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ol>
+                    {% endif %}
+                                        
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="tel" name="Phone Number" placeholder="Enter contact number " pattern="[0-9]{11}" title="phone number should be 11 digits" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">User Name</span>
+                    {{form.username}}
+                    {% if form.username.errors %}
+                        <ol>
+                        {% for error in form.username.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ol>
+                    {% endif %}
+
+                    
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    {{form.password1}}
+                    {% if form.password1.errors %}
+                        <ol>
+                        {% for error in form.password1.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ol>
+                    {% endif %}
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirm Password</span>
+                    {{form.password2}}
+                    {% if form.password2.errors %}
+                        <ol>
+                        {% for error in form.password2.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ol>
+                    {% endif %}
+                </div>
+                <div class="input-box">
+                    <span class="details">NID</span>
+                    <input type="text" name="NID" placeholder="Enter NID number " title="NID shoud be 10 digits" pattern="[0-9]{10}" required>
+                </div>
+            </div>
+            <div class="package-selection">
+                <div class="package">Select Package</div>
+                <div id="package-slider">
+                   
+                        <input type="radio" name="package-amount" id="1" value="Monthly-1000 BDT" required>
+                        
+                        <input type="radio" name="package-amount" id="2" value="Half Yearly-4500 BDT" required>
+                        
+                        <input type="radio" name="package-amount" id="3" value="Yearly-8000 BDT" required>
+                        
+                </div>
+                <div class="package-name">
+                     <div class="p1">
+                        <label for="1" amount=" 1000 BDT">1000 BDT <br> Monthly</br></label>
+                    </div>
+                    <div class="p2">  
+                        <label for="2" amount="4500 BDT">4500 BDT <br> Half-Yearly</br></label>
+                    </div>
+                    <div class="p3">
+                        <label for="3" amount="8000 BDT">8000 BDT <br>Yearly</br></label>
+                    </div>
+                </div>
+            </div>
+            <div class="payment-info">
+                <label for="payment">Select Payment method</label>
+                <div class="input-box">
+                <select name="Pay_With" >
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="Paypal">Paypal</option>
+                    <option value="Bkash">Bkash</option>
+                </select>
+                </div>
+                
+                <div class="input-box">
+                <span class="card-no">Card number</span>
+                <input type="text" name="card" placeholder="Enter card no." required>
+                 </div>
+            </div>
+            <div class="button">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

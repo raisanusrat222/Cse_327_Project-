@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap');
+*{
+    margin: 15;
+    padding: 15;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+head{
+    margin-bottom: 5em;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("metro.jpg");
+    height: 100vh;
+    padding: 10px;
+    background-image: url("metro.jpg");
+    background-size: cover;
+    
+}
+
+.container{
+    max-width: 1000px;
+    width: 100%;
+    background-color: white;
+    padding: 15px 20px ;
+    border-radius: 5px;
+    opacity: 0.95;
+    
+}
+
+.tittle{
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 11em;
+    font-weight: 500;
+    position: relative;
+}
+
+.tittle::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 250px;
+    background: black;
+    left: 10;
+    bottom: 0;
+    padding-left: 5em;
+}
+
+.user-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-box{
+    width: calc(100%/2 - 20px);
+    margin: 20px 0 12px 0;
+}
+
+.user-info.input-box.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 3em;
+    font-size: 14px;
+    border-bottom-width: 2px ;
+}
+
+.package{
+    margin-bottom: 2em;
+    font-size: 20px;
+}
+
+.package-selection{
+    
+    margin-top: 0em;
+    margin-bottom: 1em;
+}
+
+#package-slider{
+    display: flex;
+    flex-direction: row;
+    align-content:center;
+    position: relative;
+    width: 100%;
+    height: 0px;
+    justify-content: center;
+    margin-bottom: 2em;
+    
+}
+
+.package{
+    font-size: 20px;
+}
+
+.package-name{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12.5em;
+    padding-right: 12.5em;
+    padding-top: 3em;
+    
+}
+
+
+
+.p1{
+    background-color: greenyellow;
+    padding: 1em;
+    color: red;
+
+}
+
+.p2{
+    background-color: orange;
+    padding: 1em;
+}
+
+.p3{
+    background-color: purple;
+    padding: 1em;
+    color: red;
+}
+
+
+.payment-info{
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-content: center;
+}
+
+#payment{
+    height: 45px;
+    width: 50%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 3em;
+    font-size: 14px;
+    border-bottom-width: 2px ;
+    justify-content: space-between;
+}
+
+button{
+    justify-content: center;
+    align-content: center;
+    background-color: grey;
+    height: 5em;
+    width: 10em;
+}
+
+
+
+
+  .wrapper {
+    width: auto;
+    height: 100vh;
+  
+    background-image:  url("metro.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 5em;
+  
+  }
+  .Container2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5em;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(51, 51, 255,0.5);
+    /*border-bottom: 1px solid #19004d;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  
+  }
+  .logo {
+  
+    height: 100px;
+  font-family: "Abel", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  color: white;
+  padding: 15px;
+  background-color: #000099;
+  }
+  .menu {
+    display: inline-block;
+    line-height: 80px;
+  }
+  .menu ul {
+    list-style: none;
+    /* display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; */
+  }
+  .menu ul li {
+    display: inline-block;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: #ffffb3;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    transition: 0.5s ease;
+  }
+  .menu ul li a:hover {
+    border-color: white;
+  }
+  .menu ul li:nth-child(6) a {
+    color: white;
+    border: 1.5px solid #000033;
+  
+  
+  }
+  .menu ul li:nth-child(6) a:hover {
+    color: black;
+    background-color: #fff200;
+  }
+  .menu ul li:nth-child(7) a {
+    color: white;
+    border: 1.5px solid #000033;
+  }
+  .menu ul li:nth-child(7) a:hover {
+    color: black;
+    background-color: #fff200;
+  }
+  .header {
+    text-align: center;
+  }
+  .header h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    color: white;
+    padding: 45% 20px 8px;
+  }
+  .header p {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    color: white;
+    padding: 10px 15px;
+  }
+  
+  
+  

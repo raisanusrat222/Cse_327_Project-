@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Member Registration</title>
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+    
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="Conttainer">
+              <div class="nav">
+                  <div class="logo">
+                      Dhaka <br> Metro Rail
+                  </div>
+                  <div class="menu">
+                      <ul class="navMenu">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Ticket</a></li>
+                          <li><a href="#">Schedule</a></li>
+                          <li><a href="#">Fare</a></li>
+                            <li><a href="#">About US</a></li>
+                          <li><a href="#">Login</a></li>
+                          
+                          
+                          
+                      </ul>
+                     
+                  </div>
+              </div>
+      
+          </div>
+      
+      </div>
+    <div class="container">
+        <div class="tittle">Premium Member Registration</div>
+        <form action="" method="post" >
+            {% csrf_token %}
+            {{form.non_field_errors}}
+
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-dismissible alert-success">
+                
+                <strong>{{message}}<strong>
+                </div>
+                {% endfor %}
+            {% endif %}
+
+            <div class="user-info">
+                <div class="input-box">
+                    <span class="details">First Name</span>
+                    <input type="text" name="First_Name" placeholder="Enter first name " required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Last Name</span>
+                    <input type="text" name="Last_Name" placeholder="Enter last name " required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    {{form.email}}
+                    {% if form.email.errors %}
+                        <ol>
+                        {% for error in form.email.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ol>
+                    {% endif %}
+                                        
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="tel" name="Phone_Number" placeholder="Enter contact number " pattern="[0-9]{11}" title="phone number should be 11 digits" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">User Name</span>
+                    {{form.username}}
+                    {% if form.username.errors %}
+                        <ol>
+                        {% for error in form.username.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ol>
+                    {% endif %}
+
+                    
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    {{form.password1}}
+                    {% if form.password1.errors %}
+                        <ol>
+                        {% for error in form.password1.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ol>
+                    {% endif %}
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirm Password</span>
+                    {{form.password2}}
+                    {% if form.password2.errors %}
+                        <ol>
+                        {% for error in form.password2.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ol>
+                    {% endif %}
+                </div>
+                <div class="input-box">
+                    <span class="details">NID</span>
+                    <input type="text" name="NID" placeholder="Enter NID number " title="NID shoud be 10 digits" pattern="[0-9]{10}" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Address</span>
+                    <input type="text" name="Address" placeholder="Enter Address " required>
+                </div>
+            </div>
+            
+            <div class="button">
+                <button type="submit">Register</button>
+            </div>
+            
+    </div>
+           
+        </form>
+    </div>
+</body>
+</html>
