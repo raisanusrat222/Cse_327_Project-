@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>User Ticket</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href={% static 'employee.css' %}>
+    <!-- <link rel="stylesheet" href="/static/employee.css">  -->
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="Container">
+            <div class="nav">
+                <div class="logo">
+                    Dhaka <br> Metro Rail
+                </div>
+                <div class="menu">
+                    <ul class="navMenu">
+                        <li><a href="HomePage.html">Home</a></li>
+                        <li><a href="#">Ticket</a></li>
+                        <li><a href="schedule_check.html">Schedule</a></li>
+                        <li><a href="#">Fare</a></li>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="Register.html">Registration</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+
+            
+            <div id="table">
+                <div class="search">
+                    <form method="post" action="{% url 'empticket' %}">
+                        {% csrf_token %}
+                        <label for="date"></label>
+                        <input type="date" id="date" name="date" placeholder="Date">
+                        <input id="serBtn" type="submit" value="search">
+                </div>
+               
+                <table id="tab">
+                    <tr>
+                        <th>Ticket No</th>
+                        <th>Source</th>
+                        <th>Destination</th>
+                        <th>Date</th>
+                        <th>No of Tickets</th>
+                        <th>Total</th>
+                        
+                        
+                    </tr>
+                    {% for row in data %}
+                    <tr>
+                        
+                        <td>{{row.ticket_no}}</td>
+                    
+                        <td>{{row.source}}</td>
+                        <td>{{row.destination}}</td>
+                        <td>{{row.date}}</td>
+                        <td>{{row.no_of_tickets}}</td>
+                        <td>{{row.total}}</td>
+                        
+                    </tr>
+                    
+
+                    {% endfor %}
+
+                </table>
+                
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
