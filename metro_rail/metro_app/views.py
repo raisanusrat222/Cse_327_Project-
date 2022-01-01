@@ -6,10 +6,19 @@ from django.contrib.auth import authenticate,login,logout
 from metro_app.models import schedule_check
 from metro_app.models import user_ticket
 from metro_app.models import employee_ticket
-from metro_app.models import premium_ticket
-from metro_app.models import Employee
+
+
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required 
+
+from django.contrib.auth.forms import UserCreationForm
+
+
+from .models import PremiumMember, Employee
+from django.contrib.auth.models import User
+from .forms import RegForm
+from datetime import  timedelta, datetime
+
 
 
 
@@ -49,12 +58,12 @@ def loginPage(request):
     """
     
     if request.user.is_authenticated:
-        for instace in premium_ticket.objects.all():
-            if request.user.username == instace.user_name:
-                return redirect('scheck')
+        for instace in PremiumMember.objects.all():
+            if request.user.username == instace.User_Name:
+                return redirect('PremiumPage')
         for instance in Employee.objects.all():
             if request.user.username == instance.User_Name:
-                return redirect('schedule')
+                return redirect('TicketValid')
         for inst in User.objects.all():
             if request.user.username == inst.username:
                 return redirect('adpage')   
@@ -69,12 +78,12 @@ def loginPage(request):
 
              if user is not None:
                  login(request,user)
-                 for instace in premium_ticket.objects.all():
-                     if request.user.username == instace.user_name:
-                         return redirect('scheck')
+                 for instace in PremiumMember.objects.all():
+                     if request.user.username == instace.User_Name:
+                         return redirect('PremiumPage')
                  for instance in Employee.objects.all():
                      if request.user.username == instance.User_Name:
-                          return redirect('schedule')
+                          return redirect('TicketValid')
                  for inst in User.objects.all():
                      if request.user.username == inst.username:
                            return redirect('adpage')            
@@ -97,9 +106,7 @@ def logoutUser(request):
     
     
 
-def schedule(request):
-    diction= {}
-    return render(request,'metro_app/schedule.html',context=diction)
+
 def schedule_checks(request):
     """
     This method is used to display all the train schedule in schedule_checks page.
@@ -181,7 +188,7 @@ def employee_tickets (request):
 def premium_tickets(request):
 
     """
-        This method is used to display the sell history of premium_tickets and can search by start_date
+        This method is used to display the sell history of Premium Member and can search by start_date
 
         :param request: it's a HttpResponse from user.
 
@@ -193,11 +200,11 @@ def premium_tickets(request):
 
     """
     
-    searchresult=premium_ticket.objects.all()
-    start_date=request.POST.get('date')
-    if start_date != '' and start_date is not None:
-        searchresult=searchresult.filter(start_date=start_date) 
-        print(start_date)
+    searchresult=PremiumMember.objects.all()
+    Start_Date=request.POST.get('date')
+    if Start_Date != '' and Start_Date is not None:
+        searchresult=searchresult.filter(Start_Date=Start_Date) 
+        print(Start_Date)
         
         print(searchresult)
     return render(request,'metro_app/premium_ticket.html',{"data":searchresult})
@@ -211,13 +218,7 @@ def premium_tickets(request):
     
     
 
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.decorators import login_required 
 
-from .models import PremiumMember, Employee
-from django.contrib.auth.models import User
-from .forms import RegForm
-from datetime import  timedelta, datetime
 
  
 

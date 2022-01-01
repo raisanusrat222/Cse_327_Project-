@@ -1,5 +1,5 @@
 from django.db import models
-from datetime import datetime, date
+from datetime import  date
 
 
 class schedule_check (models.Model):
@@ -34,25 +34,7 @@ class user_ticket (models.Model):
     total=models.IntegerField(default=0)
     
 
-class premium_ticket(models.Model):
-    """
-    This class is used to store  information of premium users
-    This class is extended from the Model class so it has all the functionality
-    of the model class.
-    
-    this class is used to create objects for database entry has fields called first_name,last_name,user_name,phone_number,nid,package,start_date,pay_with,card_num,card_status
-    """
 
-    first_name = models.CharField(max_length=30,default='',null=False)       
-    last_name = models.CharField(max_length=30,default='',null=False)
-    user_name = models.CharField(max_length=30,default='',null=False)
-    phone_number = models.CharField(max_length=30,default='',null=False)
-    nid = models.CharField(max_length=30,default='',null=False)
-    package = models.CharField(max_length=30, default='', null=False)
-    start_date = models.DateField()      
-    pay_with = models.CharField(max_length=30)       
-    card_num = models.CharField(max_length=30,default='',null=False)
-    card_status = models.CharField(max_length=15, default='')  
     
 
 class employee_ticket(models.Model):
@@ -93,8 +75,8 @@ class PremiumMember(models.Model):
     Package = models.CharField(max_length=30, default='', null=False)        
     Pay_With = models.CharField(max_length=30)       
     Card_Num = models.CharField(max_length=30,default='',null=False)
-    Start_Date = models.DateTimeField(auto_now=True)  
-    Card_Status = models.CharField(max_length=15, default='')  
+    Start_Date = models.DateField(auto_now=True)  
+    Card_Status = models.CharField(max_length=15, default='',null=True)  
      
 class Employee(models.Model):
     """
