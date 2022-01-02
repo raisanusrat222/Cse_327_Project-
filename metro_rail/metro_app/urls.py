@@ -19,7 +19,22 @@ urlpatterns = [
     path('PremiumPage/', views.premiumpage,name="PremiumPage"),
     path('empregister/',views.empregister, name="empregister"),
     path('TicketValid/',views.TicketValid, name="TicketValid"),
-    path('employeepage/', views.employeepage, name='employeepage')
+    path('employeepage/', views.employeepage, name='employeepage'),
+
+
+    
+    path('Fare/', views.fare),
+    path('Complains/', views.complains,name="Complains"),
+    path('AfterComplain/', views.aftercomplain, name="AfterComplain"),
+    path('SeeComplains/', views.seecomplains, name="SeeComplains"),
+    path('BuyTickets/', views.buytickets,name="BuyTickets"),
+    path('AfterTickets/', views.aftertickets, name="AfterTickets"),
+    path('CancelTickets/', views.canceltickets,name="CancelTickets"),
+    path('AfterCancelTickets/', views.aftercanceltickets, name="AfterCancelTickets"),
+    path('PostponeTickets/', views.postponetickets,name="PostponeTickets"),
+    path('AfterPostponeTickets/', views.afterpostponetickets, name="AfterPostponeTickets"),
+    path('TicketMenu/', views.ticketmenu,name="TicketMenu"),
+    path('GenTicket/', views.genticket, name="GenTicket"),
 
     
 
