@@ -16,23 +16,7 @@ class schedule_check (models.Model):
     arrival_time=models.TimeField(null=True)
     departure_time=models.TimeField(null=True)
 
-class user_ticket (models.Model):
-    """
-    This class is used to store ticket information of users.
-    This class is extended from the Model class so it has all the functionality
-    of the model class.
-    
-    this class is used to create objects for database entry has fields called ticket_no,date,email,no_of_tickets,total
-    """
-    
-    ticket_no=models.IntegerField(default=0)
-    source= models.CharField(max_length=200, null=True)
-    destination=models.CharField(max_length=200, null=True)
-    date= models.DateField() 
-    email=models.EmailField(max_length=255,default='example@email.com')
-    no_of_tickets=models.IntegerField(default=0)
-    total=models.IntegerField(default=0)
-    
+
 
 
     

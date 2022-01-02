@@ -1,4 +1,3 @@
-<<<<<<< HEAD:metro_rail/metro_app/forms.py
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
@@ -29,6 +28,4 @@ class RegForm(UserCreationForm):
         return username        
 
 
-=======
 from django import forms
->>>>>>> Mohammad-Fahim-Hassan:metro_rail/Ticket/forms.py

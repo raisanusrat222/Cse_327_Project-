@@ -4,7 +4,7 @@ from django.shortcuts import redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
 from metro_app.models import schedule_check
-from metro_app.models import user_ticket
+from metro_app.models import TicketSell
 from metro_app.models import employee_ticket
 
 
@@ -166,7 +166,7 @@ def user_tickets (request):
 
 
     """
-    searchresult=user_ticket.objects.all()
+    searchresult=TicketSell.objects.all()
     date=request.POST.get('date')
     if date != '' and date is not None:
         searchresult=searchresult.filter(date=date) 

@@ -1,0 +1,63 @@
+{% load static %} 
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Schedule Check</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+        <link rel="stylesheet" href={% static 'style.css' %}>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="Container">
+                  <div class="nav">
+                      <div class="logo">
+                          Dhaka <br> Metro Rail
+                      </div>
+                      <div class="menu">
+                          <ul class="navMenu">
+                            <li><a href="{% url 'nav' %}">Home</a></li>
+                            <li><a href="{% url 'TicketMenu' %}">Ticket</a></li>
+                            <li><a href="{% url 'scheck' %}">Schedule</a></li>
+                            <li><a href="{% url 'Fare' %}">Fare</a></li>
+                            <li><a href="#">About US</a></li>
+                            <li><a href="{% url 'login' %}">Login</a></li>
+                            <li><a href="{% url 'pregister' %}">Registration</a></li>
+                          </ul>
+                      </div>
+                  </div>
+
+
+        <div id="table">
+            <table id="tab">
+                <tr>
+                    <th>Route Id</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Arrival Time</th>
+                    <th>Departure Time</th>
+                </tr>
+                {% for row in schedule_check %}
+                          <tr>
+                              <td>{{row.route_id}}</td>
+                              <td>{{row.source}}</td>
+                              <td>{{row.destination}}</td>
+                              <td>{{row.arrival_time}}</td>
+                              <td>{{row.departure_time}}</td>
+                          </tr>
+                                 
+                              {% endfor %}
+                
+            </table>
+    
+        </div>
+    </body>
+</html>
+

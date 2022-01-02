@@ -12,8 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <link rel="stylesheet" href={% static 'premium.css' %}>
-    <!-- <link rel="stylesheet" href="/static/premium.css">  -->
+    <link rel="stylesheet" href={% static 'ticket.css' %}>
+    <!-- <link rel="stylesheet" href="/static/ticket.css">  -->
 
 </head>
 
@@ -41,7 +41,7 @@
             
             <div id="table">
                 <div class="search">
-                    <form method="post" action="{% url 'preticket' %}">
+                    <form method="post" action="{% url 'usticket' %}">
                         {% csrf_token %}
                         <label for="date"></label>
                         <input type="date" id="date" name="date" placeholder="Date">
@@ -50,40 +50,30 @@
                
                 <table id="tab">
                     <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>User Name</th>
-                        <th>Phone Number</th>
-                        <th>NID</th>
-                        <th>Package</th>
-                        <th>Start Date</th>
-
-                        <th>Pay With</th>
-                        <th>Card Num</th>
-                        <th>Card Status</th>
+                        <th>Ticket No</th>
+                        <th>Source</th>
+                        <th>Destination</th>
+                        <th>Date</th>
+                        <th>No of Tickets</th>
+                        <th>Total</th>
+                        <th>Email</th>
                     </tr>
                     {% for row in data %}
                     <tr>
                         
-                        <td>{{row.First_Name}}</td>
-                        <td>{{row.Last_Name}}</td>
-                        <td>{{row.User_Name}}</td>
-                        <td>{{row.Phone_Number}}</td>
-                        <td>{{row.NID}}</td>
-
-                        <td>{{row.Package}}</td>
-                        <td>{{row.Start_Date}}</td>
-                        
-                        <td>{{row.Pay_With}}</td>
-                        <td>{{row.Card_Num}}</td>
-                        <td>{{row.Card_Status}}</td>
+                        <td>{{row.ticketNo}}</td>
+                        <td>{{row.ticketSource}}</td>
+                        <td>{{row.ticketdestination}}</td>
+                        <td>{{row.date}}</td>
+                        <td>{{row.noOfTicket}}</td>
+                        <td>{{row.total}}</td>
+                        <td>{{row.email}}</td>
                     </tr>
                     
 
                     {% endfor %}
 
                 </table>
-            </form>
                 
 
             </div>

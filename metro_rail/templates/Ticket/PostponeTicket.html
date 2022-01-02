@@ -12,13 +12,13 @@
             </div>
             <div class="menu">
                 <ul class="navMenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Ticket</a></li>
-                    <li><a href="#">Schedule</a></li>
-                    <li><a href="Fare">Fare</a></li>
-                      <li><a href="#">About US</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="Register.html">Registration</a></li>
+                  <li><a href="{% url 'nav' %}">Home</a></li>
+                  <li><a href="{% url 'TicketMenu' %}">Ticket</a></li>
+                  <li><a href="{% url 'scheck' %}">Schedule</a></li>
+                  <li><a href="{% url 'Fare' %}">Fare</a></li>
+                  <li><a href="#">About US</a></li>
+                  <li><a href="{% url 'login' %}">Login</a></li>
+                  <li><a href="{% url 'pregister' %}">Registration</a></li>
                 </ul>
             </div>
         </div>

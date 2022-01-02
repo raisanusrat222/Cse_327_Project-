@@ -21,14 +21,15 @@
               </div>
               <div class="menu">
                   <ul class="navMenu">
-                      <li><a href="{% url 'nav' %}">Home</a></li>
-                      <li><a href="#">Ticket</a></li>
-                      <li><a href="{% url 'scheck' %}">Schedule</a></li>
-                      <li><a href="#">Fare</a></li>
-                      <li><a href="#">About US</a></li>
-                      <li><a href="{% url 'empregister' %}">Employee Registration</a></li>     
+                    <li><a href="{% url 'nav' %}">Home</a></li>
+                    <li><a href="{% url 'TicketMenu' %}">Ticket</a></li>
+                    <li><a href="{% url 'scheck' %}">Schedule</a></li>
+                    <li><a href="{% url 'Fare' %}">Fare</a></li>
+                    <li><a href="#">About US</a></li>
+                    
+                    <li><a href="{% url 'empregister' %}">Employee Registration</a></li>     
                       
-                      <li><a href="{% url 'logout' %}">Logout</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
                       
 
                   </ul>
@@ -52,7 +53,7 @@
         </div>
       </div>
 
-      <a class="complain-box">Complain Box</a>
+      <a class="complain-box" href="{% url 'SeeComplains' %}">Complain Box</a>
       
     </div>
 
