@@ -63,7 +63,7 @@ def loginPage(request):
                 return redirect('PremiumPage')
         for instance in Employee.objects.all():
             if request.user.username == instance.User_Name:
-                return redirect('TicketValid')
+                return redirect('employeepage')
         for inst in User.objects.all():
             if request.user.username == inst.username:
                 return redirect('adpage')   
@@ -83,7 +83,7 @@ def loginPage(request):
                          return redirect('PremiumPage')
                  for instance in Employee.objects.all():
                      if request.user.username == instance.User_Name:
-                          return redirect('TicketValid')
+                          return redirect('employeepage')
                  for inst in User.objects.all():
                      if request.user.username == inst.username:
                            return redirect('adpage')            
@@ -371,16 +371,16 @@ def premiumpage(request):
             else:
                 messages.error(request,'already appied for card')
 
-        if request.POST.get('rpac'):
-                       
-            info.Package =  info.Package                
-            info.save()  
-            return redirect('PremiumPage') 
-
         if request.POST.get('package-amount'):
-            info.Package = request.POST.get('package-amount') 
-            info.save()
-            return redirect('PremiumPage')           
+            p = request.POST.get('package-amount')
+            if p == 'renew_package':
+                info.Package =  info.Package                
+                info.save()  
+                return redirect('PremiumPage') 
+            else:
+                info.Package = request.POST.get('package-amount') 
+                info.save()
+                return redirect('PremiumPage')           
 
     Edate = info.Start_Date 
 
@@ -396,7 +396,24 @@ def premiumpage(request):
 
     return render (request, 'metro_app/premium member page.html', context)
 
+@login_required
+def employeepage(request):
+    """
+        This method is used to view the employee page. An employee can
+        go to sell ticket page or ticket validation page from here.
 
+        :param request: it's a HttpResponse from user.
+
+        :type request: HttpResponse.
+
+        :return: this method returns a employee ragistration page which is a HTML page.
+
+        :rtype: HttpResponse.
+    """
+    context ={}
+    return render (request, 'metro_app/employeepage.html', context)
+
+@login_required
 def TicketValid(request):
     """
         This method is used to view the ticket validation page for Employee. An employee

@@ -18,7 +18,8 @@ urlpatterns = [
     path('pregister/', views.pregister,name="pregister"),
     path('PremiumPage/', views.premiumpage,name="PremiumPage"),
     path('empregister/',views.empregister, name="empregister"),
-    path('TicketValid/',views.TicketValid, name="TicketValid")
+    path('TicketValid/',views.TicketValid, name="TicketValid"),
+    path('employeepage/', views.employeepage, name='employeepage')
 
     
 
