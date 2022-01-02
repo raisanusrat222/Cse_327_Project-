@@ -3,7 +3,7 @@ from django.test import TestCase,Client
 from django.urls import reverse,resolve
 from .views import *
 from .models import *
-import json
+
 
 
 # Create your tests here.
