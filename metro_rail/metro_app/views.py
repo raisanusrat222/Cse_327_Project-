@@ -303,34 +303,32 @@ def empregister(request):
         :rtype: HttpResponse.
     """
     is_form = False
-    if request.user.is_authenticated:
-        return redirect('login')
-    else:   
-        form = RegForm()
+    
+    form = RegForm()
 
-        if request.method == 'POST':
-            form = RegForm(request.POST) 
-            obj = Employee()
+    if request.method == 'POST':
+        form = RegForm(request.POST) 
+        obj = Employee()
 
-            first_name = request.POST.get('First_Name')
-            last_name = request.POST.get('Last_Name')
-            phone = request.POST.get('Phone_Number')
-            nid = request.POST.get('NID')
-            address = request.POST.get('Address')           
-            obj.First_Name = first_name
-            obj.Last_Name =  last_name
-            for instance in Employee.objects.all():
-                if phone == instance.Phone_Number:
-                    messages.info(request, 'the phone number you entered already exists')
-                    return redirect('empregister')
-                else:    
-                    obj.Phone_Number =  phone
-            for instance1 in Employee.objects.all():
-                if nid == instance1.NID:
-                    messages.info(request, 'the NID you entered already exists')
-                    return redirect('empregister') 
-                else:           
-                    obj.NID = nid
+        first_name = request.POST.get('First_Name')
+        last_name = request.POST.get('Last_Name')
+        phone = request.POST.get('Phone_Number')
+        nid = request.POST.get('NID')
+        address = request.POST.get('Address')           
+        obj.First_Name = first_name
+        obj.Last_Name =  last_name
+        for instance in Employee.objects.all():
+            if phone == instance.Phone_Number:
+                messages.info(request, 'the phone number you entered already exists')
+                return redirect('empregister')
+            else:    
+                obj.Phone_Number =  phone
+                for instance1 in Employee.objects.all():
+                    if nid == instance1.NID:
+                        messages.info(request, 'the NID you entered already exists')
+                        return redirect('empregister') 
+                    else:           
+                        obj.NID = nid
             obj.Address = address
                 
             if form.is_valid():
