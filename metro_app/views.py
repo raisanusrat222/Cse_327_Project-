@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from metro_app.models import SellTicket
+from metro_app.models import Question
 # Create your views here.
 def home(request):
     diction = {}
@@ -20,4 +21,13 @@ def AboutUs(request):
     diction = {}
     return render(request,'metro_app/AboutUs.html', context=diction)
 
+def FeedbackForum(request):
+    questions = Question.objects.all().order_by('-created_at')
+    context = {
+        'questions': questions
+    }
+    return render(request,'metro_app/FeedbackForum.html', context)    
+
+def questionPage(request, id):
+    return None
 
