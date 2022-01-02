@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3de0a5af-0434-4898-996f-28e5133594a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/metro_rail/Static/Tickets.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metro_rail/static/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metro_rail/static/employee.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metro_rail/static/metro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metro_rail/static/premium.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metro_rail/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metro_rail/static/ticket.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/Static/Ticket.css" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/Static/Ticket.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/Ticket/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/Ticket/migrations/0002_complain.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/Ticket/migrations/0003_ticketsell.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/Ticket/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/Ticket/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/Ticket.migrations.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/Ticket.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/doctrees/Ticket.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/doctrees/Ticket.migrations.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/doctrees/environment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/doctrees/environment.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/doctrees/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/doctrees/index.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/doctrees/manage.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/doctrees/manage.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/doctrees/metro_rail.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/doctrees/metro_rail.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/doctrees/modules.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/doctrees/modules.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/.buildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/html/.buildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/Ticket.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/Ticket.migrations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_sources/Ticket.migrations.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_sources/Ticket.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_sources/index.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/html/_sources/index.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_sources/manage.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_sources/metro_rail.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/html/_sources/metro_rail.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_sources/modules.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/html/_sources/modules.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/alabaster.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/basic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/doctools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/documentation_options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/file.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/jquery-3.5.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/language_data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/pygments.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/searchtools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/underscore-1.13.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/_static/underscore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/genindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/html/genindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/html/manage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/metro_rail.html" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/html/metro_rail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/modules.html" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/html/modules.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/objects.inv" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/html/objects.inv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/py-modindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/html/py-modindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/html/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/_build/html/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/_build/html/searchindex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/make.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/manage.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/metro_rail.rst" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/metro_rail.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/docs/modules.rst" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/docs/modules.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/metro_rail/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/metro_rail/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/metro_rail/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/metro_rail/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/metro_rail/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/metro_rail/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/metro_rail/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/metro_rail/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/templates/Ticket/BuyTicket.html" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/templates/Ticket/BuyTicket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/templates/Ticket/CancelTicket.html" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/templates/Ticket/CancelTicket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/templates/Ticket/Complain.html" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/templates/Ticket/Complain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/templates/Ticket/Fare.html" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/templates/Ticket/Fare.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro_rail/templates/Ticket/PostponeTicket.html" beforeDir="false" afterPath="$PROJECT_DIR$/metro_rail/templates/Ticket/PostponeTicket.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="22GY6oqaLF0x5FzDMAtaymLx7ms" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../P" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="MeTroRaill" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3de0a5af-0434-4898-996f-28e5133594a2" name="Changes" comment="" />
+      <created>1639465218399</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639465218399</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
