@@ -323,18 +323,18 @@ def empregister(request):
                 return redirect('empregister')
             else:    
                 obj.Phone_Number =  phone
-                for instance1 in Employee.objects.all():
-                    if nid == instance1.NID:
-                        messages.info(request, 'the NID you entered already exists')
-                        return redirect('empregister') 
-                    else:           
-                        obj.NID = nid
+        for instance1 in Employee.objects.all():
+            if nid == instance1.NID:
+                messages.info(request, 'the NID you entered already exists')
+                return redirect('empregister') 
+            else:           
+                obj.NID = nid
             obj.Address = address
                 
-            if form.is_valid():
-                obj.User_Name = form.cleaned_data['username']
-                form.save()
-                is_form = True 
+        if form.is_valid():
+            obj.User_Name = form.cleaned_data['username']
+            form.save()
+            is_form = True 
                           
             if is_form == True:
                 obj.save()
