@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'Tickets.css' %}">
+</head>
+<div class="wrapper">
+  <div class="Container">
+        <div class="nav">
+            <div class="logo">
+                Dhaka <br> Metro Rail
+            </div>
+            <div class="menu">
+                <ul class="navMenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ticket</a></li>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="Fare">Fare</a></li>
+                      <li><a href="#">About US</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="Register.html">Registration</a></li>
+                </ul>
+            </div>
+        </div>
+  <div class="container2">
+  <form method="post" action="{% url 'AfterCancelTickets' %}">
+      {% csrf_token %}
+      <h1>Ticket ID</h1>
+   <label for="ticket"></label>
+    <input type="number" id="ticket" name="ticket" placeholder="ticket ID...">
+
+      <label for="date"></label>
+      <br>
+      <br>
+      <h1>Travel Date</h1>
+    <input type="date" id="date" name="date" placeholder="Travel Date...">
+
+
+    <label for="email"></label>
+      <br>
+      <br>
+      <h1>Your Email</h1>
+    <input type="email" id="email" name="email" placeholder="Your Email..">
+    <br>
+
+    <input type="submit" value="Cancel Ticket">
+  </form>
+</div>
+
+
+    </div>
+</div>
+</html>

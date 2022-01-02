@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'Tickets.css' %}">
+</head>
+<div class="wrapper">
+  <div class="Container">
+        <div class="nav">
+            <div class="logo">
+                Dhaka <br> Metro Rail
+            </div>
+            <div class="menu">
+                <ul class="navMenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ticket</a></li>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="Fare">Fare</a></li>
+                      <li><a href="#">About US</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="Register.html">Registration</a></li>
+                </ul>
+            </div>
+        </div>
+  <div class="container2">
+  <form method="post" action="{% url 'AfterTickets' %}">
+      {% csrf_token %}
+    <label for="source"></label>
+    <input type="text" id="source" name="source" placeholder="Source..">
+      <label for="destination"></label>
+    <input type="text" id="destination" name="destination" placeholder="Destination..">
+
+    <label for="email"></label>
+    <input type="email" id="email" name="email" placeholder="Your Email..">
+
+      <label for="date"></label>
+      <br>
+      <h1>Travel Date</h1>
+    <input type="date" id="date" name="date" placeholder="Travel Date...">
+       <br>
+    <label for="ticket"></label>
+    <input type="number" id="ticket" name="ticket" placeholder="No of ticket...">
+    <br>
+
+    <input type="submit" value="Purchase Ticket">
+  </form>
+</div>
+
+
+    </div>
+</div>
+</html>

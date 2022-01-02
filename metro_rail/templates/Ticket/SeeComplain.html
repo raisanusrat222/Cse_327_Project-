@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'SeeComplain.css' %}">
+</head>
+<div class="wrapper">
+  <div class="Container">
+        <div class="nav">
+            <div class="logo">
+                Dhaka <br> Metro Rail
+            </div>
+            <div class="menu">
+                <ul class="navMenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ticket</a></li>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="Fare">Fare</a></li>
+                      <li><a href="#">About US</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="Register.html">Registration</a></li>
+                </ul>
+            </div>
+        </div>
+  <div>
+
+
+<table>
+
+  <tr>
+
+      <th>Complainer</th>
+      <th>Complain</th>
+      <th>contact</th>
+  </tr>
+    {% for comid in cominfo %}
+  <tr>
+      <td>{{ comid.Complainer }}</td>
+      <td>{{ comid.Complain }}</td>
+    <td>{{ comid.Contact }}</td>
+  </tr>
+     {% endfor %}
+
+</table>
+
+
+        </div>
+
+
+    </div>
+</div>
+</html>

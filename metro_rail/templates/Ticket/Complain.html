@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'Tickets.css' %}">
+</head>
+<div class="wrapper">
+  <div class="Container">
+        <div class="nav">
+            <div class="logo">
+                Dhaka <br> Metro Rail
+            </div>
+            <div class="menu">
+                <ul class="navMenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ticket</a></li>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="Fare">Fare</a></li>
+                      <li><a href="#">About US</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="Register.html">Registration</a></li>
+                </ul>
+            </div>
+        </div>
+  <div class="container2">
+  <form method="post" action="{% url 'AfterComplain' %}">
+      {% csrf_token %}
+    <label for="fname"></label>
+    <input type="text" id="fname" name="fname" placeholder="Your name..">
+
+    <label for="contact"></label>
+    <input type="text" id="contact" name="contact" placeholder="Your contact..">
+
+
+    <label for="subject"></label>
+    <textarea id="subject" name="subject" placeholder="Write Your Complain Or Feedback.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+    </div>
+</div>
+</html>
